@@ -1,15 +1,25 @@
 {
+// Required
 "name": "Lazy CUHK",
- "version": "5.0.2",
-    "description": "Automatic login to CUHK services including ResNet, wifi, library, mycuhk, ERGWAVE,etc. (unofficial)",
-  "icons": {
+ "version": "5.1.0",
+ "manifest_version": 2,
+ 
+// Recommended
+"description": "Automatic login to CUHK services including ResNet, wifi, library, mycuhk, ERGWAVE,etc. (unofficial)",
+"icons": {
     "128": "icon/icon128.png",
     "48": "icon/icon48.png",
     "16": "icon/icon16.png"
   },
-   "background_page": "background.html",
-    "options_page": "options.html",
-   "content_scripts": [ {
+// Pick one (or none)
+
+
+// Add any of these that you need
+"background": {
+  "scripts": ["background.js"]
+  },
+"options_page": "options.html",
+"content_scripts": [ {
       "js": [ "login.js" ],
       "matches": ["*://securelogin.net.cuhk.edu.hk/*", "*://securelogin.arubanetworks.com/cgi-bin/*", "*://securelogin.wlan.cuhk.edu.hk/*", "*://www.y5zone.net/*", "*://hotspot.pccwwifi.com/*", "*://encore.lib.cuhk.edu.hk/iii/cas/login*", "*://library.cuhk.edu.hk/patroninfo", "*://portal.cuhk.edu.hk/psp/epprd/*", "*://moodle.cuhk.edu.hk/login*"]
    } ]

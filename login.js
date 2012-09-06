@@ -48,7 +48,7 @@ function(response)
 
 function showMSG(msgstr) {
     //Do nothing in release mode
-    //var ndiv = document.createElement("div");
+   // var ndiv = document.createElement("div");
     //ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
     //document.body.appendChild(ndiv);
     //alert(msgstr);
@@ -89,7 +89,8 @@ function processHTML() {
         //CUHK Login Success
         runScript("window.location.href='http://" + redirect_url + "';");
         showMSG("Redirecting");
-    } else if (pageHTML.indexOf("Y5ZONE") > 0 && pageHTML.indexOf("密碼 Password") > 0 && pageHTML.indexOf("記住我 Remember me") > 0) {
+    
+	} else if ((pageHTML.indexOf("Y5ZONE") > 0 && pageHTML.indexOf("密碼 Password") > 0 && pageHTML.indexOf("Remember me") > 0) || (pageHTML.indexOf("McDonald's Corporation.") > 0)) {
         //Y5Zone Login Page
         showMSG("in Y5ZONE login page");
         if (wifi_stored == false) {

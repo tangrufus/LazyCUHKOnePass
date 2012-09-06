@@ -4,15 +4,9 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	
-	<title>Lazy CUHK</title>
-	
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 	<link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
-	<script type="text/javascript" src="js/form-fun.jquery.js" charset="utf-8"></script>
-		
+	<title>Lazy CUHK</title>
 </head>
 
 
@@ -129,40 +123,15 @@
 					Give it a 5-star
 					<a href="https://chrome.google.com/webstore/detail/hhholmpehbnebpfklecipmcpkelnnabe/reviews">review</a>.
 					<br />
-					
 				</p>
-			
-				
 			</fieldset>
-
 		</form>
-	
-	</div>
-	
+	</div>	
 	
 	<div id="bottom-wrap">
 			<fieldset id="bottomFieldset">
 				<legend>Donations</legend>
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
-
-						<script>
-						$(function() {
-							$( "#slider-range-min" ).slider({
-								range: "min",
-								value: 50,
-								min: 10,
-								max: 500,
-								slide: function( event, ui ) {
-									$( "#amount" ).val( "HKD $" + ui.value );
-									$( "#paypalAmount" ).val(ui.value);
-								}
-							});
-							$( "#amount" ).val( "HKD $" + $( "#slider-range-min" ).slider( "value" ) );
-							$( "#paypalAmount" ).val($( "#slider-range-min" ).slider( "value" ) );
-							
-						});
-						</script>
-
 					<p>
 						<label for="amount">Amount: </label>
 						<input id="amount" />
@@ -172,14 +141,14 @@
 					<br />
 					
 				 <!-- Identify your business so that you can collect the payments. --> 
-				 <input type="hidden" name="business" value="payroom0214@gmail.com"> 
+				 <input type="hidden" name="business" value="room0214@gmail.com"> 
 
 				 <!-- Specify a Buy Now button. --> 
 				 <input type="hidden" name="cmd" value="_xclick"> 
 
 				 <!-- Specify details about the item that buyers will purchase. --> 
 				 <input type="hidden" name="item_name" value="I love Lazy CUHK"> 
-				 <input type="hidden" name="item_number" value="lazycuhk410option"> 
+				 <input type="hidden" name="item_number" value="lazycuhk.option.v510"> 
 				 <input type="hidden" name="amount" id="paypalAmount">  
 				 <input type="hidden" name="currency_code" value="HKD"> 
 				<!-- what's no_note? -->
@@ -203,5 +172,8 @@
 	</div>
 
 </body>
-
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="js/form-fun.jquery.js" charset="utf-8"></script>
+	 <script src="js/slider-jqueryUI.js"></script>
 </html>

@@ -1,4 +1,3 @@
-<script>
 //check first run?
  function onInstall() {
     //console.log("Extension Installed");
@@ -29,7 +28,7 @@
   }
 //end check first run?
 
-
+//send localhost
 chrome.extension.onRequest.addListener(
   function(request, sender, sendResponse)
   {
@@ -46,5 +45,4 @@ sendResponse({
 });
     } else sendResponse({}); // snub them.
   }
-  );
-</script>
+);
