@@ -16,7 +16,7 @@
 
 // Add any of these that you need
 "background": {
-  "page": "background.html"
+  "scripts": ["background.js"]
   },
 "options_page": "options.html",
 "content_scripts": [ {
