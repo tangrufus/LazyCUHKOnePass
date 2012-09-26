@@ -18,7 +18,7 @@
 
 ##v5.1.0 (6 September 2012)
 * Github management started
-* Upgraded to [manifest version] 2](http://developer.chrome.com/extensions/manifestVersion.html)
+* Upgraded to [manifest version 2](http://developer.chrome.com/extensions/manifestVersion.html)
 * Support McDonald's Y5Zone
 * PayPal account changed
 * jQuery runs after option page is loaded
