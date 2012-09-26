@@ -29,19 +29,38 @@ Serveral kinds of contributions are accepted.
 ##Workflow
 Here’s the most direct way to get your work merged into the project:
 
-**Keep this in mind: The `master` branch is for deployment.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `develop` branch before pusll request. **
+**Keep this in mind: The `master` branch is for deployment.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `develop` branch before pull request. **
 
 
 1. Fork the project
-2. Clone your fork `git clone https://github.com/<yourName>/LazyCUHK.git`
-3. Configure remote `git remote add upstream https://github.com/TangRufus/LazyCUHK.git`
-4. Set up to track remote branch `git branch develop upstream/develop`
-5. Create a topic branch,branch off from the develop branch, to contain your change `git checkout -b my_awesome_feature develop`
-6. Hack away
-7. If necessary, fetch the `develop` branch and rebase your commits into logical chunks, without bugs
-8. Push the branch up to your own copy of fork `git push origin my_awesome_feature`
-9. Create an Pull Request with a description and link to your branch
+2. Clone your fork
 
+		git clone https://github.com/<yourName>/LazyCUHK.git
+3. Configure remote
+
+		git remote add upstream https://github.com/TangRufus/LazyCUHK.git
+		git branch develop upstream/develop
+4. Create a descriptively named branch, branch off from the develop branch, to contain your change 
+
+		git checkout -b my_awesome_feature develop
+5. Hack away
+6. Stay updated
+
+		git fetch upstream
+		git checkout develop
+		git merge upstream/develop
+		git push origin develop
+7. Rebase
+
+		git checkout my_awesome_feature
+		git git merge develop
+   If necessary, rebase your commits into logical chunks, without bugs
+8. Push the branch up to your own copy of fork
+
+		git push origin my_awesome_feature
+
+9. Create an Pull Request with a description and link to your branch
+10. You have done so much.  Leave the hard work to me.  Enjoy being lazy.  
 
 ##Finally...
 Thanks! 
