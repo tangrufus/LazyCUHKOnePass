@@ -1,8 +1,9 @@
-LazyCUHK Changelog
+LazyCUHK ChangeLog
 ==================
 
 v??????
 -----------------------
+*	Github ribbon added
 *	Changelog re-formatted
 *	Typo in changelog fixed
 
