@@ -10,7 +10,7 @@ Automatic login to CUHK services including ResNet, wifi, library, mycuhk, ERGWAV
 ##Troubleshoot
 > How to open option page?
 
-Go to [chrome://extensions](chrome://extensions).  
+Go to "chrome://extensions" (type it in the address bar).    
 Click "option" under LazyCUHK.   
 
 ##Bug Report or Suggestion
@@ -29,7 +29,7 @@ Serveral kinds of contributions are accepted.
 ##Workflow
 Here’s the most direct way to get your work merged into the project:
 
-**Keep this in mind: The `master` branch is for deployment.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `develop` branch before pull request. **
+**Keep this in mind: The `master` branch is for deployment.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `upstream/develop` branch before pull request. **
 
 
 1. Fork the project
@@ -59,7 +59,7 @@ Here’s the most direct way to get your work merged into the project:
 
 		git push origin my_awesome_feature
 
-9. Create an Pull Request with a description and link to your branch
+9. Create an Pull Request with a description and link to your `my_awesome_feature`branch
 10. You have done so much.  Leave the hard work to me.  Enjoy being lazy.  
 
 ##Finally...
