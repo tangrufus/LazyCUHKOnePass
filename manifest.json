@@ -1,6 +1,6 @@
 {
 "name": "Lazy CUHK",
- "version": "5.3.1",
+ "version": "5.3.2",
  "manifest_version": 2,
  
 
@@ -10,8 +10,7 @@
     "48": "icon/icon48.png",
     "16": "icon/icon16.png"
   },
-  
-"content_security_policy": "script-src 'self' https://facebook.com https://connect.facebook.net; object-src 'self'",  
+ 
 "background": {
   "scripts": ["background.js"]
   },
