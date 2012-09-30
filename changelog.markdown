@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v?.?.? (??)
+* First-time set-up instruction in README modified
+
 ##v5.2.0 (27 September 2012)
 * LazyCUHK goes open source
 * Github ribbon added
