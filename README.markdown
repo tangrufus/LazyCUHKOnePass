@@ -12,7 +12,7 @@ Automatic login to CUHK services including ResNet, WiFi, library, MyCUHK, ERGWAV
 
 Go to "chrome://extensions" (type it in the address bar).    
 Click "option" under LazyCUHK.   
-![firstTimeSetUp](/images/firstTimeSetUp.png)
+![firstTimeSetUp](https://raw.github.com/TangRufus/LazyCUHK/master/images/firstTimeSetUp.png)
 
 ##Bug Report or Suggestion
 * Send an E-mail to <room0214@gmail.com>
