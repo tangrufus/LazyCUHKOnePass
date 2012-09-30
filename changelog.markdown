@@ -1,6 +1,7 @@
 #LazyCUHK ChangeLog
 
-##v?.?.? (??)
+##v5.3.0 (1 October 2012)
+* Facebook like & send button added
 * First-time set-up instruction in README modified
 
 ##v5.2.0 (27 September 2012)
