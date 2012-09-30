@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v5.3.3 (1 October 2012)
+* Unknown manifest bug fixed
+
 ##v5.3.2 (1 October 2012)
 * Give up adding Facebook like & send buttons due to Content Security Policy
 
