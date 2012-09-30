@@ -8,16 +8,9 @@
 	<title>Lazy CUHK</title>
 </head>
 
-
 <body>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "https://connect.facebook.net/en_GB/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	<script type="text/JavaScript" src="js/facebook-jssdk.js"></script>
 	
 	<a href="https://github.com/TangRufus"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
 	
@@ -39,13 +32,7 @@
 				<label for="u_id">
 					Enter your 10-digit student id<br />
 				</label>
-				<input type="text" id="u_id" maxlength="10"
-					onkeydown="return ( event.ctrlKey || event.altKey 
-				                    || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
-				                    || (95<event.keyCode && event.keyCode<106)
-				                    || (event.keyCode==8) || (event.keyCode==9) 
-				                    || (event.keyCode>34 && event.keyCode<40) 
-				                    || (event.keyCode==46) )"></input>
+				<input type="text" id="u_id" class="numberinput" maxlength="10"></input>
 				
 				<br />
 				<br />
@@ -70,7 +57,7 @@
 				<div id="ergwave_id_wrap">
 					<label for="ergwave_id">
 							Enter your ERGWAVE username</label><br />
-					<input type="text" id="ergwave_id" maxlength="20"</input>
+					<input type="text" id="ergwave_id" maxlength="20"></input>
 				</div>
 			</fieldset>
 		
@@ -185,5 +172,6 @@
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
 <script type="text/javascript" src="js/form-fun.jquery.js" charset="utf-8"></script>
-	 <script src="js/slider-jqueryUI.js"></script>
+<script src="js/slider-jqueryUI.js"></script>
+<script type="text/javascript" src="js/numberinput.js"></script>
 </html>
