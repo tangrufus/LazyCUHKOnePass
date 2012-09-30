@@ -24,7 +24,7 @@ Serveral kinds of contributions are accepted.
 * Give a 5-star review in [chrome web store](https://chrome.google.com/webstore/detail/hhholmpehbnebpfklecipmcpkelnnabe/reviews)
 * Money donation via option page PayPal button
 * Star the [LazyCUHK Github repo](https://github.com/TangRufus/LazyCUHK)
-* Implement a new feature, see [Workflow](https://github.com/TangRufus/LazyCUHK#Workflow)
+* Implement a new feature, see [Workflow](https://github.com/TangRufus/LazyCUHK#workflow)
 
 ##Workflow
 Here’s the most direct way to get your work merged into the project:
