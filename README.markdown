@@ -1,10 +1,10 @@
 #LazyCUHK
-Automatic login to CUHK services including ResNet, wifi, library, mycuhk, ERGWAVE,etc. (unofficial)
+Automatic login to CUHK services including ResNet, WiFi, library, MyCUHK, ERGWAVE,etc. (unofficial)
 
 ##Installation
 1. Go to [Chrome Web Store - LazyCUHK](https://chrome.google.com/webstore/detail/hhholmpehbnebpfklecipmcpkelnnabe)
 2. Click `ADD TO CHROME` button on the top-right hand corner
-3. Option page should automictally pops up 
+3. Option page should automatically pops up 
 4. Enter your account information in the option page
 
 ##Troubleshoot
@@ -12,24 +12,25 @@ Automatic login to CUHK services including ResNet, wifi, library, mycuhk, ERGWAV
 
 Go to "chrome://extensions" (type it in the address bar).    
 Click "option" under LazyCUHK.   
+![firstTimeSetUp](https://raw.github.com/TangRufus/LazyCUHK/master/images/firstTimeSetUp.png)
 
 ##Bug Report or Suggestion
 * Send an E-mail to <room0214@gmail.com>
-* Make a new [GitHub Issus](https://github.com/TangRufus/LazyCUHK/issues)
+* Make a new [GitHub Issue](https://github.com/TangRufus/LazyCUHK/issues)
 
 ##Contribution
 So you hate the cumbrous login processes. Great!
-Serveral kinds of contributions are accepted.
+Several kinds of contributions are accepted.
 
 * Give a 5-star review in [chrome web store](https://chrome.google.com/webstore/detail/hhholmpehbnebpfklecipmcpkelnnabe/reviews)
 * Money donation via option page PayPal button
 * Star the [LazyCUHK Github repo](https://github.com/TangRufus/LazyCUHK)
-* Implement a new feature, see [Workflow](https://github.com/TangRufus/LazyCUHK#workflow)
+* Implement a new feature, see [Workflow](#workflow)
 
 ##Workflow
 Here’s the most direct way to get your work merged into the project:
 
-**Keep this in mind: The `master` branch is for deployment.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `upstream/develop` branch before pull request. **
+**Keep this in mind: The `master` branch is for deployment only.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `upstream/develop` branch before pull request. **
 
 
 1. Fork the project
