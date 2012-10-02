@@ -1,10 +1,13 @@
 #LazyCUHK ChangeLog
 
+##v5.3.4 (3 October 2012)
+* Facebook [like](http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flazy-cuhk%2Fhhholmpehbnebpfklecipmcpkelnnabe&send=false&layout=standard&width=270&show_faces=false&action=like&colorscheme=light&font&height=35) button added using iFrame
+
 ##v5.3.3 (1 October 2012)
 * Unknown manifest bug fixed
 
 ##v5.3.2 (1 October 2012)
-* Give up adding Facebook like & send buttons due to Content Security Policy
+* Gave up adding Facebook like & send buttons due to Content Security Policy
 
 ##v5.3.1 (1 October 2012)
 * Bug fixed(Content Security Policy)

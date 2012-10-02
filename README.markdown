@@ -22,6 +22,7 @@ Click "option" under LazyCUHK.
 So you hate the cumbrous login processes. Great!
 Several kinds of contributions are welcomed.
 
+* [Like](http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flazy-cuhk%2Fhhholmpehbnebpfklecipmcpkelnnabe&send=false&layout=standard&width=270&show_faces=false&action=like&colorscheme=light&font&height=35) LazyCUHK via the button on options page
 * Give a 5-star review in [chrome web store](https://chrome.google.com/webstore/detail/hhholmpehbnebpfklecipmcpkelnnabe/reviews)
 * Money donation via option page PayPal button
 * Star the [LazyCUHK Github repo](https://github.com/TangRufus/LazyCUHK)
