@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v????????
+* [Tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2FRn37fk) added into contribution section of readme
+
 ##v5.3.4 (13 October 2012)
 * Two [tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2FRn37fk) buttons added using iFrame
 * One more Facebook like button added into the donations section
