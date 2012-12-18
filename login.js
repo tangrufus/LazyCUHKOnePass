@@ -41,6 +41,7 @@ function(response)
     wifi_stored = ((com_id != "") && (wifi_pw != ""));
     lib_stored = ((com_id != "") && (lib_pw != ""));
     mycuhk_stored = ((u_id != "") && (cwem_pw != ""));
+	blackboard_stored = ((u_id != "") && (cwem_pw != ""));
     moodle_stored = ((com_id != "") && (cwem_pw != ""));
     processHTML();
 });
@@ -49,9 +50,9 @@ function(response)
 function showMSG(msgstr) {
     //Do nothing in release mode
    // var ndiv = document.createElement("div");
-    //ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
-    //document.body.appendChild(ndiv);
-    //alert(msgstr);
+   // ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
+   // document.body.appendChild(ndiv);
+   // alert(msgstr);
 }
 
 function runScript(scriptstr) {
@@ -125,6 +126,33 @@ function processHTML() {
         showMSG("Submit is Automatically Clicked");
 
         //numberthrees work starts here
+		
+    } else if (pageHTML.indexOf("Blackboard Learn - CUHK") > 0) {
+        //blackboard Login Page	
+        showMSG("in blackboard login page");
+        if (blackboard_stored == false) {
+            showMSG("blackboard account not yet stored");
+            return;
+        }
+        try {
+			showMSG("try blackboard iframe");
+			 
+			 
+			 function inject() {
+				 showMSG("try blackboard inject");
+	 			var iframe = document.getElementsByTagName("frame")[1];
+	 			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+	             innerDoc.getElementsByName("user_id")[0].value = u_id;
+	             innerDoc.getElementsByName("password")[0].value = cwem_pw;
+				 innerDoc.getElementsByTagName("input")[4].click();
+				 showMSG("Login is Automatically Clicked");	
+			 }
+			 
+			 setTimeout(inject, 3000);
+			 
+			}
+        catch(err) {
+            }
     } else if (pageHTML.indexOf("Staff/Library ID:") > 0) {
         //CUHK Library Login Page	
         if (lib_stored == false) {
