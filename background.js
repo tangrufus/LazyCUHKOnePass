@@ -2,11 +2,13 @@
  function onInstall() {
     //console.log("Extension Installed");
 	chrome.tabs.create({url: "options.html"});
+	chrome.tabs.create({url: "update.html"});
   }
 
   function onUpdate() {
     //console.log("Extension Updated");
 	chrome.tabs.create({url: "options.html"});
+	chrome.tabs.create({url: "update.html"});
   }
 
   function getVersion() {
