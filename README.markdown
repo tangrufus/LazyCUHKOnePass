@@ -20,7 +20,8 @@ LazyCUHK is no longer available in Chrom Web Store in respond to a request from 
 > How to open option page?
 
 Go to "chrome://extensions" (type it in the address bar)   
-Click "option" under LazyCUHK
+Click "option" under LazyCUHK  
+
 ![firstTimeSetUp](https://raw.github.com/TangRufus/LazyCUHK/master/images/firstTimeSetUp.png)
 
 ##Bug Report or Suggestion
