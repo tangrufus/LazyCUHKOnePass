@@ -40,7 +40,7 @@ Several kinds of contributions are welcomed.
 ##Workflow
 Here’s the most direct way to get your work merged into the project:
 
-*Keep this in mind: The `master` branch is for deployment only.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `upstream/develop` branch before pull request. *
+*Keep this in mind: The `master` branch is for deployment only.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `upstream/develop` branch before pull request.*
 
 
 1. Fork the project
