@@ -24,7 +24,6 @@ Several kinds of contributions are welcomed.
 
 * [tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2F12OABwe) LazyCUHK
 * [Like](http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgithub.com%2FTangRufus%2FLazyCUHK&send=false&layout=standard&width=270&show_faces=false&action=like&colorscheme=light&font&height=35) LazyCUHK via the button on options page
-* Give a 5-star review in [chrome web store](https://chrome.google.com/webstore/detail/hhholmpehbnebpfklecipmcpkelnnabe/reviews)
 * Money donation via option page PayPal button
 * Star the [LazyCUHK Github repo](https://github.com/TangRufus/LazyCUHK)
 * Implement a new feature, see [Workflow](#workflow)
