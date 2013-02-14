@@ -1,17 +1,26 @@
 #LazyCUHK
 Automatic login to CUHK services including ResNet, WiFi, library, MyCUHK, ERGWAVE,etc. (unofficial)
 
-##Installation
-1. Go to [Chrome Web Store - LazyCUHK](https://chrome.google.com/webstore/detail/hhholmpehbnebpfklecipmcpkelnnabe)
-2. Click `ADD TO CHROME` button on the top-right hand corner
-3. Option page should automatically pops up 
-4. Enter your account information in the option page
+##Anouncement
+LazyCUHK is no longer available in Chrom Web Store in respond to a request from CUHK ITSC.  You can get it via its GitHub [repo](https://github.com/TangRufus/LazyCUHK) page.
 
+##Installation
+1. Download the source code from GitHub [Tags](https://github.com/TangRufus/LazyCUHK/tags) page [^1]
+2. Unzip the the source code
+3. Go to "chrome://extensions" (type it in the address bar)
+4. Check `Developer mode`
+5. Click `Load unpacked extension…`
+6. Select the unzipped folder
+
+[^1] OR, clone it by
+
+		git clone https://github.com/<yourName>/LazyCUHK.git
+		
 ##Troubleshoot
 > How to open option page?
 
-Go to "chrome://extensions" (type it in the address bar).    
-Click "option" under LazyCUHK.   
+Go to "chrome://extensions" (type it in the address bar)   
+Click "option" under LazyCUHK
 ![firstTimeSetUp](https://raw.github.com/TangRufus/LazyCUHK/master/images/firstTimeSetUp.png)
 
 ##Bug Report or Suggestion
@@ -22,9 +31,8 @@ Click "option" under LazyCUHK.
 So you hate the cumbrous login processes. Great!
 Several kinds of contributions are welcomed.
 
-* [tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2FRn37fk) LazyCUHK
-* [Like](http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flazy-cuhk%2Fhhholmpehbnebpfklecipmcpkelnnabe&send=false&layout=standard&width=270&show_faces=false&action=like&colorscheme=light&font&height=35) LazyCUHK via the button on options page
-* Give a 5-star review in [chrome web store](https://chrome.google.com/webstore/detail/hhholmpehbnebpfklecipmcpkelnnabe/reviews)
+* [Tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2F12OABwe) LazyCUHK
+* [Like](http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgithub.com%2FTangRufus%2FLazyCUHK&send=false&layout=standard&width=270&show_faces=false&action=like&colorscheme=light&font&height=35) LazyCUHK via the button on options page
 * Money donation via option page PayPal button
 * Star the [LazyCUHK Github repo](https://github.com/TangRufus/LazyCUHK)
 * Implement a new feature, see [Workflow](#workflow)
@@ -62,7 +70,7 @@ Here’s the most direct way to get your work merged into the project:
 
 		git push origin my_awesome_feature
 
-9. Create an Pull Request with a description and link to your `my_awesome_feature`branch
+9. Create an [Pull Request](https://github.com/TangRufus/LazyCUHK/pull/new/master) with a description and link to your `my_awesome_feature`branch
 10. You have done so much.  Leave the hard work to me.  Enjoy being lazy.  
 
 ##Finally...

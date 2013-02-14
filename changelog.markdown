@@ -1,16 +1,19 @@
 #LazyCUHK ChangeLog
 
+##v6.0.1 (15 February 2012)
+* Linked all document to GitHub repo page instead of Chrome Web Store
+
 ##v6.0.0 (18 December 2012)
 * Support Blackboard
-* [Tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2FRn37fk) added into contribution section of readme
+* [Tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2F12OABwe) added into contribution section of readme
 * Update-page added
 
 ##v5.3.5 (13 October 2012)
-* Two [tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2FRn37fk) buttons added using iFrame
+* Two [tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2F12OABwe) buttons added using iFrame
 * One more Facebook like button added into the donations section
 
 ##v5.3.4 (3 October 2012)
-* Facebook [like](http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flazy-cuhk%2Fhhholmpehbnebpfklecipmcpkelnnabe&send=false&layout=standard&width=270&show_faces=false&action=like&colorscheme=light&font&height=35) button added using iFrame
+* Facebook [like](http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgithub.com%2FTangRufus%2FLazyCUHK&send=false&layout=standard&width=270&show_faces=false&action=like&colorscheme=light&font&height=35) button added using iFrame
 
 ##v5.3.3 (1 October 2012)
 * Unknown manifest bug fixed
