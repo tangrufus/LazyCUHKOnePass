@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v6.1.0 (22 May 2013)
+* Redirect to lets9up.com
+
 ##v6.0.1 (15 February 2012)
 * Linked all document to GitHub repo page instead of Chrome Web Store
 
