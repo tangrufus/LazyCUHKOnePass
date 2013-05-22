@@ -13,7 +13,7 @@ function(response)
     ergwave_pw = response.ergwave_pw;
     fqdn = response.fqdn;
 
-    redirect_url = "google.com";
+    redirect_url = "lets9up.com";
     if (!wifi_pw) wifi_pw = "";
     if (!cwem_pw) cwem_pw = "";
     if (!lib_pw) lib_pw = "";
