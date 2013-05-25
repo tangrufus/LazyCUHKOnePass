@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v6.2.0 (26 May 2013)
+* Social media point to chrome web store page
+
 ##v6.1.0 (22 May 2013)
 * Redirect to lets9up.com
 
