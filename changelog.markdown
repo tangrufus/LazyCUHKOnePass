@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v6.2.1 (26 May 2013)
+* Typo fixed
+
 ##v6.2.0 (26 May 2013)
 * Social media point to chrome web store page
 
