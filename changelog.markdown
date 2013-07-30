@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v6.2.1 (31 July 2013)
+* Redirect to [google.com](google.com)
+
 ##v6.2.1 (26 May 2013)
 * Typo fixed
 
