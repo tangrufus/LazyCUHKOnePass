@@ -127,7 +127,7 @@ function processHTML() {
 
         //numberthrees work starts here
 		
-    } else if (pageHTML.indexOf("Blackboard Learn - CUHK") > 0) {
+    } else if (pageHTML.indexOf("Blackboard Learn") > 0) {
         //blackboard Login Page	
         showMSG("in blackboard login page");
         if (blackboard_stored == false) {
@@ -140,11 +140,10 @@ function processHTML() {
 			 
 			 function inject() {
 				 showMSG("try blackboard inject");
-	 			var iframe = document.getElementsByTagName("frame")[1];
-	 			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-	             innerDoc.getElementsByName("user_id")[0].value = u_id;
-	             innerDoc.getElementsByName("password")[0].value = cwem_pw;
-				 innerDoc.getElementsByTagName("input")[4].click();
+
+	             document.getElementsByName('user_id')[0].value = u_id;
+	             document.getElementsByName('password')[0].value = cwem_pw;
+				 document.querySelector('input.submit').click();
 				 showMSG("Login is Automatically Clicked");	
 			 }
 			 
