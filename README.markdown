@@ -20,7 +20,8 @@ LazyCUHK is no longer available in Chrom Web Store in respond to a request from 
 > How to open option page?
 
 Go to "chrome://extensions" (type it in the address bar)   
-Click "option" under LazyCUHK
+Click "option" under LazyCUHK  
+
 ![firstTimeSetUp](https://raw.github.com/TangRufus/LazyCUHK/master/images/firstTimeSetUp.png)
 
 ##Bug Report or Suggestion
@@ -40,7 +41,7 @@ Several kinds of contributions are welcomed.
 ##Workflow
 Here’s the most direct way to get your work merged into the project:
 
-**Keep this in mind: The `master` branch is for deployment only.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `upstream/develop` branch before pull request. **
+*Keep this in mind: The `master` branch is for deployment only.  Branch off from the `develop` branch to start your awesome work.  Fetch and rebase the `upstream/develop` branch before pull request.*
 
 
 1. Fork the project
@@ -64,7 +65,7 @@ Here’s the most direct way to get your work merged into the project:
 7. Rebase
 
 		git checkout my_awesome_feature
-		git git merge develop
+		git merge develop
    If necessary, rebase your commits into logical chunks, without bugs
 8. Push the branch up to your own copy of fork
 
