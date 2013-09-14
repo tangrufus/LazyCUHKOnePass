@@ -1,6 +1,11 @@
 #LazyCUHK ChangeLog
 
-##v6.2.1 (31 July 2013)
+##v6.2.3 (14 September 2013)
+* Compatible with the new version of Library login page
+* Compatible with the new version of Blackboard login page
+
+
+##v6.2.2 (31 July 2013)
 * Redirect to [google.com](google.com)
 
 ##v6.2.1 (26 May 2013)
