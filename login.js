@@ -217,10 +217,7 @@ function processHTML() {
         document.getElementsByName("user")[0].value = ergwave_id;
         document.getElementsByName("password")[0].focus();
         document.getElementsByName("password")[0].value = ergwave_pw;
-		//document.getElementsByName("fqdn")[0].focus();
         document.getElementsByName("fqdn")[0].value = fqdn;
-		//document.getElementsByName("Login")[0].focus();
-      	//document.getElementsByName("Login")[0].click();
  		document.getElementById("regform").submit();
 		showMSG("Submit is Automatically Clicked");
     }
