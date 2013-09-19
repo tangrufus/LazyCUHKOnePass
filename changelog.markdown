@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v6.2.4 (20 September 2013)
+* Bug fixed
+
 ##v6.2.3 (14 September 2013)
 * Compatible with the new version of Library login page
 * Compatible with the new version of Blackboard login page
