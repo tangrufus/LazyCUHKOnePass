@@ -2,12 +2,12 @@
 Automatic login to CUHK services including ResNet, WiFi, library, MyCUHK, ERGWAVE, Blackboard, etc. (unofficial)
 
 ##Anouncement
-You can get the source code of LazyCUHK via its GitHub [repo](https://github.com/TangRufus/LazyCUHK) page.
+You can get the source code of LazyCUHK via its [GitHub Repo](https://github.com/TangRufus/LazyCUHK) page or [Chrome Web App Store](https://chrome.google.com/webstore/detail/lazy-cuhk/hhholmpehbnebpfklecipmcpkelnnabe).
 
 ##Installation
-1. Download the source code from GitHub [Tags](https://github.com/TangRufus/LazyCUHK/tags) page [^1]
+1. Download the source code from its [GitHub Releases](https://github.com/TangRufus/LazyCUHK/releases) page [^1]
 2. Unzip the the source code
-3. Go to "chrome://extensions" (type it in the address bar)
+3. Go to [chrome://extensions](chrome://extensions) (type it in the address bar)
 4. Check `Developer mode`
 5. Click `Load unpacked extension…`
 6. Select the unzipped folder
@@ -17,7 +17,7 @@ You can get the source code of LazyCUHK via its GitHub [repo](https://github.com
 		git clone https://github.com/TangRufus/LazyCUHK.git
 		
 ##Troubleshoot
-> How to open option page?
+> How to open the option page?
 
 Go to "chrome://extensions" (type it in the address bar)   
 Click "option" under LazyCUHK  
@@ -35,7 +35,7 @@ Several kinds of contributions are welcomed.
 * [Tweet](https://twitter.com/intent/tweet?original_referer=&source=tweetbutton&text=LazyCUHK!%20%20Don%E2%80%99t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20&url=http%3A%2F%2Fbit.ly%2FRn37fk) LazyCUHK
 * [Like](http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flazy-cuhk%2Fhhholmpehbnebpfklecipmcpkelnnabe&send=false&layout=standard&width=270&show_faces=false&action=like&colorscheme=light&font&height=35) LazyCUHK via the button on options page
 * Money donation via option page PayPal button
-* Star the [LazyCUHK Github repo](https://github.com/TangRufus/LazyCUHK)
+* Star the [LazyCUHK Github Repo](https://github.com/TangRufus/LazyCUHK)
 * Implement a new feature, see [Workflow](#workflow)
 
 ##Workflow
