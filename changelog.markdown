@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v6.2.5 (23 September 2013)
+* Typo fixed
+
 ##v6.2.4 (20 September 2013)
 * Bug fixed
 
