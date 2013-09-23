@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v6.2.6 (23 September 2013)
+* Donation form added to the update page
+
 ##v6.2.5 (23 September 2013)
 * Typo fixed
 
