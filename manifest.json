@@ -1,6 +1,6 @@
 {
 "name": "Lazy CUHK",
- "version": "6.2.2",
+ "version": "6.2.6",
  "manifest_version": 2,
  
 
@@ -18,16 +18,18 @@
 "options_page": "options.html",
 "content_scripts": [ {
       "js": [ "login.js" ],
-      "matches": ["*://securelogin.net.cuhk.edu.hk/*",
-      "*://securelogin.arubanetworks.com/cgi-bin/*",
-      "*://securelogin.wlan.cuhk.edu.hk/*",
-      "*://www.y5zone.net/*",
-      "*://hotspot.pccwwifi.com/*",
-      "*://encore.lib.cuhk.edu.hk/iii/cas/login*",
-      "*://library.cuhk.edu.hk/patroninfo",
-      "*://portal.cuhk.edu.hk/psp/epprd/*",
-      "*://moodle.cuhk.edu.hk/login*",
-      "*://elearn.cuhk.edu.hk/*",
-      "*://www.uhs.cuhk.edu.hk/Internet-Booking/*Login"
-      ]}]
+      "matches": [
+        "*://securelogin.net.cuhk.edu.hk/*",
+        "*://securelogin.arubanetworks.com/cgi-bin/*",
+        "*://securelogin.wlan.cuhk.edu.hk/*",
+        "*://www.y5zone.net/*", 
+        "*://hotspot.pccwwifi.com/*", 
+        "*://encore.lib.cuhk.edu.hk/iii/cas/login*", 
+        "*://library.cuhk.edu.hk/patroninfo*", 
+        "*://portal.cuhk.edu.hk/psp/epprd/*", 
+        "*://moodle.cuhk.edu.hk/login*", 
+        "*://elearn.cuhk.edu.hk/*", 
+        "*://easysearch.lib.cuhk.edu.hk/*",
+        "*://www.uhs.cuhk.edu.hk/Internet-Booking/*Login"
+      ]} ]
 }
