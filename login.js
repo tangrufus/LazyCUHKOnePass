@@ -152,22 +152,28 @@ function processHTML() {
 			}
         catch(err) {
             }
-    } else if (pageHTML.indexOf("Staff/Library ID:") > 0) {
+    } else if (pageHTML.indexOf("Staff/Library ID:") > 0 || pageHTML.indexOf("Student / Staff / Library ID:") > 0) {
         //CUHK Library Login Page	
         if (lib_stored == false) {
             showMSG("Library account not yet stored");
             return;
         }
         try {
-            document.getElementsByName("code")[0].value = u_id;
-            document.getElementsByName("pin")[0].value = lib_pw;
+	        if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
+	            document.getElementsByName("bor_id")[0].value = u_id;
+	            document.getElementsByName("bor_verification")[0].value = lib_pw;
+			   
+	        } else {
+	            document.getElementsByName("code")[0].value = u_id;
+	            document.getElementsByName("pin")[0].value = lib_pw;
+	        }
         }
         catch(err) {
             }
         if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
-            document.getElementsByName("submit")[0].click();
+		    document.getElementsByClassName("but")[0].click();
         } else {
-            document.forms["fm1"].submit();
+            document.getElementsByName("submit")[0].click();
         }
         showMSG("Login is Automatically Clicked");
     } else if (pageHTML.indexOf("Welcome to MyCUHK") > 0) {
@@ -211,10 +217,7 @@ function processHTML() {
         document.getElementsByName("user")[0].value = ergwave_id;
         document.getElementsByName("password")[0].focus();
         document.getElementsByName("password")[0].value = ergwave_pw;
-		//document.getElementsByName("fqdn")[0].focus();
         document.getElementsByName("fqdn")[0].value = fqdn;
-		//document.getElementsByName("Login")[0].focus();
-      	//document.getElementsByName("Login")[0].click();
  		document.getElementById("regform").submit();
 		showMSG("Submit is Automatically Clicked");
     }
