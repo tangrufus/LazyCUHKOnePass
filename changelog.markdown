@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v7.0.1 (29 September 2013)
+* Bug fixed - ENGWAVE password div slideUp now
+
 ##v7.0.0 (29 September 2013)
 * Support UHS system
 

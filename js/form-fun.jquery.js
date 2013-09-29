@@ -17,9 +17,11 @@ $(function() {
 	function ergwaveTest(){
 		if ($("#fqdn").val() != ""){
 			$("#ergwave_id_wrap").slideDown();
+			$("#ergwave_pw_wrap").slideDown();
 		}
 		else{
-			$("#ergwave_id_wrap").hide();
+			$("#ergwave_id_wrap").slideUp();
+			$("#ergwave_pw_wrap").slideUp();
 		}
 	}
 	
@@ -157,9 +159,11 @@ $(function() {
 		
 		if ($("#fqdn").val() != ""){
 			$("#ergwave_id_wrap").slideDown();
+			$("#ergwave_pw_wrap").slideDown();
 		}
 		else{
-			$("#ergwave_id_wrap").hide();
+			$("#ergwave_id_wrap").slideUp();
+			$("#ergwave_pw_wrap").slideUp();
 		}
 		stepOneTest();
 	});
