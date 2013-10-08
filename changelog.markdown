@@ -1,6 +1,6 @@
 #LazyCUHK ChangeLog
 
-##v7.0.1 (29 September 2013)
+##v7.0.1 (08 October 2013)
 * Bug fixed - ENGWAVE password div slideUp now
 
 ##v7.0.0 (29 September 2013)
