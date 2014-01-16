@@ -1,7 +1,7 @@
 #LazyCUHK ChangeLog
 
 ##v7.0.3 (17 January 2014)
-* ASH special
+* Adam Schall Special
 
 ##v7.0.2 (17 January 2014)
 * Compatible with the new version of PCCW login page
