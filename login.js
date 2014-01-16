@@ -49,10 +49,10 @@ function(response)
 
 function showMSG(msgstr) {
     //Do nothing in release mode
-   // var ndiv = document.createElement("div");
-   // ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
-   // document.body.appendChild(ndiv);
-   // alert(msgstr);
+    //var ndiv = document.createElement("div");
+    //ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
+    //document.body.appendChild(ndiv);
+    //alert(msgstr);
 }
 
 function runScript(scriptstr) {
@@ -62,6 +62,7 @@ function runScript(scriptstr) {
 }
 
 function processHTML() {
+	showMSG("processHTML");
     pageHTML = (document.getElementsByTagName("html")[0].innerHTML);
     if (pageHTML.indexOf("CUHK Wi-Fi Service - Use Policies and Guidelines") > 0 || pageHTML.indexOf("Wired Network Service - Use Policies and Guidelines") > 0) {
         //CUHK Policy Accept Page
@@ -110,23 +111,22 @@ function processHTML() {
         //PCCW Login Success
         runScript("window.location.href='http://" + redirect_url + "';");
         showMSG("Redirecting");
-    } else if (pageHTML.indexOf("PCCW Wi-Fi") > 0) {
+    } else if (pageHTML.indexOf("PCCW-HKT Wi-Fi") > 0) {
         //PCCW Login Page
         if (wifi_stored == false) {
             showMSG("PCCW account not yet stored");
             return;
         }
-        document.getElementById("others_uni_option")[4].selected = "1";
-        runScript("MM_jumpMenu(document.getElementById('others_uni_option'));");
-        document.getElementsByName("others_uni")[0].focus();
-        document.getElementsByName("others_uni")[0].value = com_id;
-        document.getElementsByName("others_pwd1")[1].focus();
-        document.getElementsByName("others_pwd1")[1].value = wifi_pw;
-        runScript("submitForm('login5a');");
-        showMSG("Submit is Automatically Clicked");
-
-        //numberthrees work starts here
-		
+		showMSG("PCCW login pagekajsdkj");
+		document.getElementById("myLogin_tab_5").click();
+		document.getElementById("others_uni_option")[4].selected = "1";
+		runScript("MM_jumpMenu(document.getElementById('others_uni_option'));");
+		document.getElementsByName("others_uni")[0].focus();
+ 	   	document.getElementsByName("others_uni")[0].value = com_id;
+ 	   	document.getElementsByName("others_pwd1")[1].focus();
+  	  	document.getElementsByName("others_pwd1")[1].value = wifi_pw;
+ 	   	runScript("submitForm('login5a');");
+     	showMSG("Submit is Automatically Clicked");
     } else if (pageHTML.indexOf("Blackboard Learn") > 0) {
         //blackboard Login Page	
         showMSG("in blackboard login page");
