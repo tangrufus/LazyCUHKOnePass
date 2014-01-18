@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v (2014)
+* Typo fixed
+
 ##v7.0.3 (17 January 2014)
 * Adam Schall Special
 
