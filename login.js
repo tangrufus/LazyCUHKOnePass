@@ -13,7 +13,7 @@ function(response)
     ergwave_pw = response.ergwave_pw;
     fqdn = response.fqdn;
 
-	redirect_url = "https://www.google.com.hk/search?hl=zh-TW&gl=hk&authuser=0&tbm=nws&q=%E8%87%AA%E7%94%B1%E8%A1%8C+%E4%B8%83%E5%8D%83%E8%90%AC&oq=%E8%87%AA%E7%94%B1%E8%A1%8C+%E4%B8%83%E5%8D%83%E8%90%AC";
+	redirect_url = "www.google.com.hk/search?hl=zh-TW&gl=hk&authuser=0&tbm=nws&q=%E8%87%AA%E7%94%B1%E8%A1%8C+%E4%B8%83%E5%8D%83%E8%90%AC&oq=%E8%87%AA%E7%94%B1%E8%A1%8C+%E4%B8%83%E5%8D%83%E8%90%AC";
 	
     if (!wifi_pw) wifi_pw = "";
     if (!cwem_pw) cwem_pw = "";
