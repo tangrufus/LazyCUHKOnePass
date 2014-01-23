@@ -13,7 +13,7 @@ function(response)
     ergwave_pw = response.ergwave_pw;
     fqdn = response.fqdn;
 
-	redirect_url = "www.google.com.hk/search?q=%E9%BA%A5%E9%99%B3%E6%B7%91%E8%B3%A2&espv=210&es_sm=91&source=lnms&tbm=nws&sa=X&ei=-U7YUrfwBO-XiQe_v4DIDA&ved=0CAsQ_AUoAw&biw=1278&bih=702";
+	redirect_url = "https://www.google.com.hk/search?hl=zh-TW&gl=hk&authuser=0&tbm=nws&q=%E8%87%AA%E7%94%B1%E8%A1%8C+%E4%B8%83%E5%8D%83%E8%90%AC&oq=%E8%87%AA%E7%94%B1%E8%A1%8C+%E4%B8%83%E5%8D%83%E8%90%AC";
 	
     if (!wifi_pw) wifi_pw = "";
     if (!cwem_pw) cwem_pw = "";
@@ -93,7 +93,7 @@ function processHTML() {
         runScript("window.location.href='http://" + redirect_url + "';");
         showMSG("Redirecting");
     
-	} else if ((pageHTML.indexOf("Y5ZONE") > 0 && pageHTML.indexOf("密碼 Password") > 0 && pageHTML.indexOf("Remember me") > 0) || (pageHTML.indexOf("McDonald's Corporation.") > 0)) {
+	} else if (pageHTML.indexOf("Y5ZONE Wi-Fi Login Page") > 0 || pageHTML.indexOf("McDonald's Corporation.") > 0) {
         //Y5Zone Login Page
         showMSG("in Y5ZONE login page");
         if (wifi_stored == false) {

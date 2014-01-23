@@ -1,6 +1,8 @@
 #LazyCUHK ChangeLog
 
-##v (2014)
+##v7.0.4 (23 January2014)
+* Compatible with the new version of Y5ZONE login page
+* Individual Visit Scheme Special
 * Typo fixed
 
 ##v7.0.3 (17 January 2014)
