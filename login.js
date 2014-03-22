@@ -221,11 +221,21 @@ function processHTML() {
         document.getElementsByName("fqdn")[0].value = fqdn;
  		document.getElementById("regform").submit();
 		showMSG("Submit is Automatically Clicked");
-    }else if (pageHTML.indexOf("https://www.uhs.cuhk.edu.hk") > 0 || pageHTML.indexOf("大學保健處網上預約服務") > 0) {
+    } else if (pageHTML.indexOf("https://www.uhs.cuhk.edu.hk") > 0 || pageHTML.indexOf("大學保健處網上預約服務") > 0) {
         //University Health Service - Internet Booking System
         document.getElementsByName('S8_')[0].value = com_id;
         document.getElementsByName('S10_')[0].value = cwem_pw;
         document.getElementsByTagName('a')[0].click();
+    } else if (location.href.indexOf('academic.veriguide') != -1) {
+        // Veriguide
+        var userIdField = document.getElementsByName('userId')[0],
+            passwordField = document.getElementsByName('passphrase')[0];
+
+        if( userIdField && passwordField ){
+            userIdField.value = com_id;
+            passwordField.value = cwem_pw;
+            document.getElementById('LoginCUHKActionForm').submit();
+        }
     }
 }
 
