@@ -228,15 +228,16 @@ function processHTML() {
         document.getElementsByTagName('a')[0].click();
     } else if (location.href.indexOf('academic.veriguide') != -1) {
         // Veriguide
-        var userIdField = document.getElementsByName('userId')[0],
+        var userNameField = document.getElementsByName('userId')[0],
             passwordField = document.getElementsByName('passphrase')[0];
 
-        if( userIdField && passwordField ){
-            userIdField.value = com_id;
+        if( userNameField && passwordField ){
+            userNameField.value = com_id;
             passwordField.value = cwem_pw;
             document.getElementById('LoginCUHKActionForm').submit();
         }
     } else if (location.href.toLowerCase().indexOf('timetable4.cuhk.edu.hk/sciesswsprod/login.aspx') != -1) {
+        // Exam timetable
         var userNameField = document.getElementById('tUserName'),
             passwordField = document.getElementById('tPassword'),
             loginButton = document.getElementById('bLogin');
@@ -245,6 +246,17 @@ function processHTML() {
             userNameField.value = u_id;
             passwordField.value = cwem_pw;
             document.getElementById('bLogin').click();
+        }
+    } else if (location.href.indexOf('webprint.erg.cuhk.edu.hk') != -1) {
+        // engg webpribnt
+        var userNameField = document.getElementById('inputUsername'),
+            passwordField = document.getElementById('inputPassword'),
+            loginForm = document.getElementsByName('Form0')[0];
+
+        if (userNameField && passwordField && loginForm) {
+            userNameField.value = com_id;
+            passwordField.value = cwem_pw;
+            loginForm.submit();
         }
     }
 }
