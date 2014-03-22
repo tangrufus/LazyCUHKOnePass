@@ -30,6 +30,9 @@
         "*://moodle.cuhk.edu.hk/login*",
         "*://elearn.cuhk.edu.hk/*",
         "*://easysearch.lib.cuhk.edu.hk/*",
-        "*://www.uhs.cuhk.edu.hk/Internet-Booking/*Login"
+        "*://www.uhs.cuhk.edu.hk/Internet-Booking/*Login",
+        "*://academic.veriguide.org/academic/*",
+        "*://timetable4.cuhk.edu.hk/sciesswsprod/*",
+        "*://webprint.erg.cuhk.edu.hk/*"
       ]} ]
 }
