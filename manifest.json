@@ -31,6 +31,7 @@
         "*://elearn.cuhk.edu.hk/*",
         "*://easysearch.lib.cuhk.edu.hk/*",
         "*://www.uhs.cuhk.edu.hk/Internet-Booking/*Login",
-        "*://academic.veriguide.org/academic/*"
+        "*://academic.veriguide.org/academic/*",
+        "*://timetable4.cuhk.edu.hk/sciesswsprod/*"
       ]} ]
 }

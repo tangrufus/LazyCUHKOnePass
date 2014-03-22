@@ -236,6 +236,16 @@ function processHTML() {
             passwordField.value = cwem_pw;
             document.getElementById('LoginCUHKActionForm').submit();
         }
+    } else if (location.href.toLowerCase().indexOf('timetable4.cuhk.edu.hk/sciesswsprod/login.aspx') != -1) {
+        var userNameField = document.getElementById('tUserName'),
+            passwordField = document.getElementById('tPassword'),
+            loginButton = document.getElementById('bLogin');
+        
+        if (userNameField && passwordField && loginButton) {
+            userNameField.value = u_id;
+            passwordField.value = cwem_pw;
+            document.getElementById('bLogin').click();
+        }
     }
 }
 
