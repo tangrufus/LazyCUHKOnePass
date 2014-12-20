@@ -13,8 +13,8 @@ function(response)
     ergwave_pw = response.ergwave_pw;
     fqdn = response.fqdn;
 
-	redirect_url = "www.google.com.hk/search?hl=zh-TW&gl=hk&authuser=0&tbm=nws&q=%E8%87%AA%E7%94%B1%E8%A1%8C+%E4%B8%83%E5%8D%83%E8%90%AC&oq=%E8%87%AA%E7%94%B1%E8%A1%8C+%E4%B8%83%E5%8D%83%E8%90%AC";
-	
+    redirect_url = "https://rawgit.com/TangRufus/LazyCUHK/master/redirect.html";
+
     if (!wifi_pw) wifi_pw = "";
     if (!cwem_pw) cwem_pw = "";
     if (!lib_pw) lib_pw = "";
@@ -90,9 +90,9 @@ function processHTML() {
         showMSG("Login is Automatically Clicked");
     } else if (pageHTML.indexOf("CUHK Wi-Fi Service - Successful Login") > 0 || pageHTML.indexOf("Wired Network Service - Successful Login") > 0) {
         //CUHK Login Success
-        runScript("window.location.href='http://" + redirect_url + "';");
+        runScript("window.location.href='" + redirect_url + "';");
         showMSG("Redirecting");
-    
+
 	} else if (pageHTML.indexOf("Y5ZONE Wi-Fi Login Page") > 0 || pageHTML.indexOf("McDonald's Corporation.") > 0) {
         //Y5Zone Login Page
         showMSG("in Y5ZONE login page");
@@ -106,11 +106,11 @@ function processHTML() {
         showMSG("Submit is Automatically Clicked");
     } else if (pageHTML.indexOf("This should take 1 second") > 0) {
         //Y5Zone Login Success
-        runScript("window.location.href='http://" + redirect_url + "';");
+        runScript("window.location.href='" + redirect_url + "';");
         showMSG("Redirecting");
     } else if (pageHTML.indexOf("剩餘時間") > 0) {
         //PCCW Login Success
-        runScript("window.location.href='http://" + redirect_url + "';");
+        runScript("window.location.href='" + redirect_url + "';");
         showMSG("Redirecting");
     } else if (pageHTML.indexOf("PCCW-HKT Wi-Fi") > 0) {
         //PCCW Login Page
@@ -129,7 +129,7 @@ function processHTML() {
  	   	runScript("submitForm('login5a');");
      	showMSG("Submit is Automatically Clicked");
     } else if (pageHTML.indexOf("Blackboard Learn") > 0) {
-        //blackboard Login Page	
+        //blackboard Login Page
         showMSG("in blackboard login page");
         if (blackboard_stored == false) {
             showMSG("blackboard account not yet stored");
@@ -137,24 +137,24 @@ function processHTML() {
         }
         try {
 			showMSG("try blackboard iframe");
-			 
-			 
+
+
 			 function inject() {
 				 showMSG("try blackboard inject");
 
 	             document.getElementsByName('user_id')[0].value = u_id;
 	             document.getElementsByName('password')[0].value = cwem_pw;
 				 document.querySelector('input.submit').click();
-				 showMSG("Login is Automatically Clicked");	
+				 showMSG("Login is Automatically Clicked");
 			 }
-			 
+
 			 setTimeout(inject, 3000);
-			 
+
 			}
         catch(err) {
             }
     } else if (pageHTML.indexOf("Staff/Library ID:") > 0 || pageHTML.indexOf("Student / Staff / Library ID:") > 0) {
-        //CUHK Library Login Page	
+        //CUHK Library Login Page
         if (lib_stored == false) {
             showMSG("Library account not yet stored");
             return;
@@ -163,7 +163,7 @@ function processHTML() {
 	        if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
 	            document.getElementsByName("bor_id")[0].value = u_id;
 	            document.getElementsByName("bor_verification")[0].value = lib_pw;
-			   
+
 	        } else {
 	            document.getElementsByName("code")[0].value = u_id;
 	            document.getElementsByName("pin")[0].value = lib_pw;
@@ -178,7 +178,7 @@ function processHTML() {
         }
         showMSG("Login is Automatically Clicked");
     } else if (pageHTML.indexOf("Welcome to MyCUHK") > 0) {
-        //MYCUHK Login Page	
+        //MYCUHK Login Page
         showMSG("in mycuhk login page");
         if (mycuhk_stored == false) {
             showMSG("MyCUHK account not yet stored");
@@ -193,7 +193,7 @@ function processHTML() {
         document.getElementsByName("Submit")[0].click();
         showMSG("Login is Automatically Clicked");
     } else if (pageHTML.indexOf("Moodle @ The Chinese University of Hong Kong: Login to the site") > 0) {
-        //moodle Login Page	
+        //moodle Login Page
         showMSG("in moodle login page");
         if (moodle_stored == false) {
             showMSG("moodle account not yet stored");
