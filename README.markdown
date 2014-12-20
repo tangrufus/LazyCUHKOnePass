@@ -15,12 +15,12 @@ You can get the source code of LazyCUHK via its [GitHub Repo](https://github.com
 [^1] OR, clone it by
 
 		git clone https://github.com/TangRufus/LazyCUHK.git
-		
+
 ##Troubleshoot
 > How to open the option page?
 
-Go to "chrome://extensions" (type it in the address bar)   
-Click "option" under LazyCUHK  
+Go to "chrome://extensions" (type it in the address bar)
+Click "option" under LazyCUHK
 
 ![firstTimeSetUp](https://raw.github.com/TangRufus/LazyCUHK/master/images/firstTimeSetUp.png)
 
@@ -51,8 +51,8 @@ Here’s the most direct way to get your work merged into the project:
 3. Configure remote
 
 		git remote add upstream https://github.com/TangRufus/LazyCUHK.git
-		
-4. Create a descriptively named branch, branch off from the master branch, to contain your change 
+
+4. Create a descriptively named branch, branch off from the master branch, to contain your change
 
 		git checkout -b my_awesome_feature
 
@@ -71,7 +71,7 @@ Here’s the most direct way to get your work merged into the project:
 		git push origin my_awesome_feature
 
 9. Create an [Pull Request](https://github.com/TangRufus/LazyCUHK/pull/new/master) with a description and link to your `my_awesome_feature`branch
-10. You have done so much.  Leave the hard work to me.  Enjoy being lazy.  
+10. You have done so much.  Leave the hard work to me.  Enjoy being lazy.
 
 ##Finally...
-Thanks! 
+Thanks!
