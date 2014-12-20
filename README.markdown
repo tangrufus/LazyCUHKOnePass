@@ -25,7 +25,7 @@ Click "option" under LazyCUHK
 ![firstTimeSetUp](https://raw.github.com/TangRufus/LazyCUHK/master/images/firstTimeSetUp.png)
 
 ##Bug Report or Suggestion
-* Send an E-mail to <room0214@gmail.com>
+* Send an E-mail to <tangrufus@gmail.com>
 * Make a new [GitHub Issue](https://github.com/TangRufus/LazyCUHK/issues)
 
 ##Contribution
