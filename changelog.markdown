@@ -1,6 +1,9 @@
 #LazyCUHK ChangeLog
 
-##v7.0.4 (23 January2014)
+##v7.0.5 (21 December 2014)
+* Redirect to donation page
+
+##v7.0.4 (23 January 2014)
 * Compatible with the new version of Y5ZONE login page
 * Individual Visit Scheme Special
 * Typo fixed
@@ -103,7 +106,7 @@
 ##v5.0.0 (2 August 2012)
 * Support ResNet
 * Option page pop up on first run or updated
-* Typo fixed 
+* Typo fixed
 
 ##v4.1.1 (10 April 2012)
 * Compatible with the new version of MyCUHK login page
