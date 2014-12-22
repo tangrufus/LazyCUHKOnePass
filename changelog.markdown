@@ -1,5 +1,10 @@
 #LazyCUHK ChangeLog
 
+##v7.0.6 (22 December 2014)
+* Hotfix: Y5ZONE login page detection
+* Hotfix: PCCW login page detection
+* Remove: Moodle support
+
 ##v7.0.5 (21 December 2014)
 * Redirect to donation page
 

@@ -1,6 +1,6 @@
 {
 "name": "Lazy CUHK",
- "version": "7.0.5",
+ "version": "7.0.6",
  "manifest_version": 2,
 
 
@@ -22,12 +22,12 @@
         "*://securelogin.net.cuhk.edu.hk/*",
         "*://securelogin.arubanetworks.com/cgi-bin/*",
         "*://securelogin.wlan.cuhk.edu.hk/*",
-        "*://www.y5zone.net/*",
+        "*://*.y5zone.net/*",
         "*://hotspot.pccwwifi.com/*",
+        "*://hotspot.cslwifi.com/*",
         "*://encore.lib.cuhk.edu.hk/iii/cas/login*",
         "*://library.cuhk.edu.hk/patroninfo*",
         "*://portal.cuhk.edu.hk/psp/epprd/*",
-        "*://moodle.cuhk.edu.hk/login*",
         "*://elearn.cuhk.edu.hk/*",
         "*://easysearch.lib.cuhk.edu.hk/*",
         "*://www.uhs.cuhk.edu.hk/Internet-Booking/*Login"
