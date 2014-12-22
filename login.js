@@ -192,21 +192,6 @@ function processHTML() {
             }
         document.getElementsByName("Submit")[0].click();
         showMSG("Login is Automatically Clicked");
-    } else if (pageHTML.indexOf("Moodle @ The Chinese University of Hong Kong: Login to the site") > 0) {
-        //moodle Login Page
-        showMSG("in moodle login page");
-        if (moodle_stored == false) {
-            showMSG("moodle account not yet stored");
-            return;
-        }
-        try {
-            document.getElementsByName("username")[0].value = com_id;
-            document.getElementsByName("password")[0].value = cwem_pw;
-        }
-        catch(err) {
-            }
-        document.forms["login"].submit();
-        showMSG("Login is Automatically Clicked");
     } else if (pageHTML.indexOf("REGISTERED USER") > 0) {
         //ERGWAVE Login Page
         if (ergwave_stored == false) {
