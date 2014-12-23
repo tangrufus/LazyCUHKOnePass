@@ -50,10 +50,10 @@ function(response)
 
 function showMSG(msgstr) {
     // Do nothing in release mode
-    var ndiv = document.createElement("div");
-    ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
-    document.body.appendChild(ndiv);
-    alert(msgstr);
+    // var ndiv = document.createElement("div");
+    // ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
+    // document.body.appendChild(ndiv);
+    // alert(msgstr);
 }
 
 function runScript(scriptstr) {
