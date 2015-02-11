@@ -13,7 +13,7 @@ function(response)
     ergwave_pw = response.ergwave_pw;
     fqdn = response.fqdn;
 
-    redirect_url = "https://rawgit.com/TangRufus/LazyCUHK/master/redirect.html";
+    redirect_url = "https://cdn.rawgit.com/TangRufus/LazyCUHK/master/redirect.html";
 
     if (!wifi_pw) wifi_pw = "";
     if (!cwem_pw) cwem_pw = "";
