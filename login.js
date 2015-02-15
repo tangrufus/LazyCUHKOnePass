@@ -44,6 +44,7 @@ function(response)
     mycuhk_stored = ((u_id != "") && (cwem_pw != ""));
 	blackboard_stored = ((u_id != "") && (cwem_pw != ""));
     moodle_stored = ((com_id != "") && (cwem_pw != ""));
+	iewave_stored = (ergwave_id != "") && (ergwave_pw != "");
     processHTML();
 });
 
@@ -210,6 +211,17 @@ function processHTML() {
         //Y5Zone Login Success
         runScript("window.location.href='" + redirect_url + "';");
         showMSG("Redirecting");
-    }
+    } else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("login.chi") > 0){
+		//IEWAVE Login Page
+        if (ergwave_stored == false) {
+            showMSG("IEWAVE account not yet stored");
+            return;
+        }
+        showMSG("start IEWAVE login");
+        document.getElementsByName("username")[0].value = ergwave_id;
+        document.getElementsByName("password")[0].value = ergwave_pw;
+ 		document.getElementsByName("form")[0].submit();
+		showMSG("Submit is Automatically Clicked");
+	}
 }
 
