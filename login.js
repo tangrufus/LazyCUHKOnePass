@@ -61,7 +61,7 @@ function runScript(scriptstr) {
     document.body.appendChild(scriptNode);
 }
 
-function  redirectAfterLogin() {
+function redirectAfterLogin() {
     showMSG("Redirecting");
     runScript("window.location.href='" + redirect_url + "';");
 }
