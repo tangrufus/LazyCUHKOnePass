@@ -31,6 +31,7 @@
         "*://elearn.cuhk.edu.hk/*",
         "*://easysearch.lib.cuhk.edu.hk/*",
         "*://www.uhs.cuhk.edu.hk/Internet-Booking/*Login",
-		"*://192.168.110.1:*/www/login.chi?*"
+		"*://192.168.110.1:*/www/login.chi?*",
+		"*://sts.cuhk.edu.hk/adfs/ls/*"
       ]} ]
 }

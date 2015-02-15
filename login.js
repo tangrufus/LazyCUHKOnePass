@@ -45,6 +45,7 @@ function(response)
 	blackboard_stored = ((u_id != "") && (cwem_pw != ""));
     moodle_stored = ((com_id != "") && (cwem_pw != ""));
 	iewave_stored = (ergwave_id != "") && (ergwave_pw != "");
+	cuhklink_stored = ((u_id != "") && (cwem_pw != ""));
     processHTML();
 });
 
@@ -223,5 +224,17 @@ function processHTML() {
  		document.getElementsByName("form")[0].submit();
 		showMSG("Submit is Automatically Clicked");
 	}
+	else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
+        //CUHKLink Login Page
+        if (cuhklink_stored == false) {
+            showMSG("CUHK Office 365 link account not yet stored");
+            return;
+        }
+
+        document.getElementsByName("UserName")[0].value = u_id + "@link.cuhk.edu.hk";
+        document.getElementsByName("Password")[0].value = cwem_pw;
+        document.getElementById("loginForm").submit();
+        showMSG("Submit is Automatically Clicked");
+    }
 }
 
