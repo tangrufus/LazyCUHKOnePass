@@ -2,7 +2,7 @@ chrome.extension.sendRequest({
     request: "accounts"
 },
 function(response)
- {
+{
     showMSG("Init JS");
 
     u_id = response.u_id;
@@ -13,7 +13,7 @@ function(response)
     ergwave_pw = response.ergwave_pw;
     fqdn = response.fqdn;
 
-    redirect_url = "https://cdn.rawgit.com/TangRufus/LazyCUHK/master/redirect.html";
+    redirect_url = "https://cdn.rawgit.com/TangRufus/LazyCUHK/46244bdede0d53aaa761ad44dccf85c6a7f969d2/redirect.html";
 
     if (!wifi_pw) wifi_pw = "";
     if (!cwem_pw) cwem_pw = "";
@@ -51,7 +51,7 @@ function(response)
 
 
 function showMSG(msgstr) {
-    // Do nothing in release mode
+    // Do nothing in production mode
     // var ndiv = document.createElement("div");
     // ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
     // document.body.appendChild(ndiv);
@@ -64,8 +64,13 @@ function runScript(scriptstr) {
     document.body.appendChild(scriptNode);
 }
 
+function redirectAfterLogin() {
+    showMSG("Redirecting");
+    runScript("window.location.href='" + redirect_url + "';");
+}
+
 function processHTML() {
-	showMSG("processHTML");
+    showMSG("processHTML");
     pageHTML = (document.getElementsByTagName("html")[0].innerHTML);
     if (pageHTML.indexOf("CUHK Wi-Fi Service - Use Policies and Guidelines") > 0 || pageHTML.indexOf("Wired Network Service - Use Policies and Guidelines") > 0) {
         //CUHK Policy Accept Page
@@ -87,33 +92,31 @@ function processHTML() {
             document.getElementsByName("password")[0].value = cwem_pw;
         }
         catch(err) {
-            }
+        }
         document.getElementsByName("Login")[0].click();
         showMSG("Login is Automatically Clicked");
     } else if (pageHTML.indexOf("CUHK Wi-Fi Service - Successful Login") > 0 || pageHTML.indexOf("Wired Network Service - Successful Login") > 0) {
         //CUHK Login Success
-        runScript("window.location.href='" + redirect_url + "';");
-        showMSG("Redirecting");
+        redirectAfterLogin();
     } else if (pageHTML.indexOf("剩餘時間") > 0) {
         //PCCW Login Success
-        runScript("window.location.href='" + redirect_url + "';");
-        showMSG("Redirecting");
+        redirectAfterLogin();
     } else if (pageHTML.indexOf("歡迎使用csl Wi-Fi服務") > 0) {
         //PCCW Login Page
         if (wifi_stored == false) {
             showMSG("PCCW account not yet stored");
             return;
         }
-		showMSG("PCCW login page");
-		document.getElementById("myLogin_tab_5").click();
-		document.getElementById("others_uni_option")[4].selected = "1";
-		runScript("MM_jumpMenu(document.getElementById('others_uni_option'));");
-		document.getElementsByName("others_uni")[0].focus();
- 	   	document.getElementsByName("others_uni")[0].value = com_id;
- 	   	document.getElementsByName("others_pwd1")[1].focus();
-  	  	document.getElementsByName("others_pwd1")[1].value = wifi_pw;
- 	   	runScript("submitForm('login5a');");
-     	showMSG("Submit is Automatically Clicked");
+        showMSG("PCCW login page");
+        document.getElementById("myLogin_tab_5").click();
+        document.getElementById("others_uni_option")[4].selected = "1";
+        runScript("MM_jumpMenu(document.getElementById('others_uni_option'));");
+        document.getElementsByName("others_uni")[0].focus();
+        document.getElementsByName("others_uni")[0].value = com_id;
+        document.getElementsByName("others_pwd1")[1].focus();
+        document.getElementsByName("others_pwd1")[1].value = wifi_pw;
+        runScript("submitForm('login5a');");
+        showMSG("Submit is Automatically Clicked");
     } else if (pageHTML.indexOf("Blackboard Learn") > 0) {
         //blackboard Login Page
         showMSG("in blackboard login page");
@@ -122,23 +125,23 @@ function processHTML() {
             return;
         }
         try {
-			showMSG("try blackboard iframe");
+            showMSG("try blackboard iframe");
 
 
-			 function inject() {
-				 showMSG("try blackboard inject");
+            function inject() {
+                showMSG("try blackboard inject");
 
-	             document.getElementsByName('user_id')[0].value = u_id;
-	             document.getElementsByName('password')[0].value = cwem_pw;
-				 document.querySelector('input.submit').click();
-				 showMSG("Login is Automatically Clicked");
-			 }
-
-			 setTimeout(inject, 3000);
-
-			}
-        catch(err) {
+                document.getElementsByName('user_id')[0].value = u_id;
+                document.getElementsByName('password')[0].value = cwem_pw;
+                document.querySelector('input.submit').click();
+                showMSG("Login is Automatically Clicked");
             }
+
+            setTimeout(inject, 3000);
+
+        }
+        catch(err) {
+        }
     } else if (pageHTML.indexOf("Staff/Library ID:") > 0 || pageHTML.indexOf("Student / Staff / Library ID:") > 0) {
         //CUHK Library Login Page
         if (lib_stored == false) {
@@ -146,19 +149,19 @@ function processHTML() {
             return;
         }
         try {
-	        if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
-	            document.getElementsByName("bor_id")[0].value = u_id;
-	            document.getElementsByName("bor_verification")[0].value = lib_pw;
+            if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
+                document.getElementsByName("bor_id")[0].value = u_id;
+                document.getElementsByName("bor_verification")[0].value = lib_pw;
 
-	        } else {
-	            document.getElementsByName("code")[0].value = u_id;
-	            document.getElementsByName("pin")[0].value = lib_pw;
-	        }
+            } else {
+                document.getElementsByName("code")[0].value = u_id;
+                document.getElementsByName("pin")[0].value = lib_pw;
+            }
         }
         catch(err) {
-            }
+        }
         if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
-		    document.getElementsByClassName("but")[0].click();
+            document.getElementsByClassName("but")[0].click();
         } else {
             document.getElementsByName("submit")[0].click();
         }
@@ -175,7 +178,7 @@ function processHTML() {
             document.getElementsByName("pwd")[0].value = cwem_pw;
         }
         catch(err) {
-            }
+        }
         document.getElementsByName("Submit")[0].click();
         showMSG("Login is Automatically Clicked");
     } else if (pageHTML.indexOf("REGISTERED USER") > 0) {
@@ -190,8 +193,8 @@ function processHTML() {
         document.getElementsByName("password")[0].focus();
         document.getElementsByName("password")[0].value = ergwave_pw;
         document.getElementsByName("fqdn")[0].value = fqdn;
- 		document.getElementById("regform").submit();
-		showMSG("Submit is Automatically Clicked");
+        document.getElementById("regform").submit();
+        showMSG("Submit is Automatically Clicked");
     }else if (pageHTML.indexOf("https://www.uhs.cuhk.edu.hk") > 0 || pageHTML.indexOf("大學保健處網上預約服務") > 0) {
         //University Health Service - Internet Booking System
         document.getElementsByName('S8_')[0].value = com_id;
@@ -212,6 +215,7 @@ function processHTML() {
         //Y5Zone Login Success
         runScript("window.location.href='" + redirect_url + "';");
         showMSG("Redirecting");
+		redirectAfterLogin();
     } else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("login.chi") > 0){
 		//IEWAVE Login Page
         if (ergwave_stored == false) {
@@ -223,6 +227,7 @@ function processHTML() {
         document.getElementsByName("password")[0].value = ergwave_pw;
  		document.getElementsByName("form")[0].submit();
 		showMSG("Submit is Automatically Clicked");
+		redirectAfterLogin();
 	}
 	else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
         //CUHKLink Login Page
