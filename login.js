@@ -213,8 +213,7 @@ function processHTML() {
         showMSG("Submit is Automatically Clicked");
     } else if (pageHTML.indexOf("Thank you for using Y5ZONE FREE WiFi Service") > 0 && pageHTML.indexOf("You are now connected to the Internet") > 0) {
         //Y5Zone Login Success
-        runScript("window.location.href='" + redirect_url + "';");
-        showMSG("Redirecting");
+        redirectAfterLogin();
     } else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("login.chi") > 0 && pageHTML.indexOf("was not valid") < 0){
 		//IEWAVE Login Page
         if (ergwave_stored == false) {
