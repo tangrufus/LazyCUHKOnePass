@@ -229,8 +229,7 @@ function processHTML() {
 	}
 	else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("You are about to be redirected to") > 0){
 		//IEWAVE Login Success   
-        runScript("window.location.href='" + redirect_url + "';");
-        showMSG("Redirecting");
+		redirectAfterLogin();
 	}
 	else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
         //CUHKLink Login Page
