@@ -1,5 +1,9 @@
 #LazyCUHK ChangeLog
 
+##v7.0.8 (15 February 2015)
+* Code refactoring
+* Performance boost
+
 ##v7.0.7 (22 December 2014)
 * Disable debug alerts
 
