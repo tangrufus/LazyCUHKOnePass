@@ -1,16 +1,14 @@
 {
 "name": "Lazy CUHK",
- "version": "7.0.8",
+ "version": "8.0.0",
  "manifest_version": 2,
 
-
-"description": "Automatic login to CUHK services including ResNet, wifi, library, mycuhk, ERGWAVE,etc. (unofficial)",
+"description": "Automatic login to CUHK services including ResNet, wifi, library, mycuhk, ERGWAVE, IEWAVE,etc. (unofficial)",
 "icons": {
     "128": "icon/icon128.png",
     "48": "icon/icon48.png",
     "16": "icon/icon16.png"
   },
-
 
 "background": {
   "scripts": ["background.js"]
