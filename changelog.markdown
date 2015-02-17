@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v8.0.2 (18 February 2015)
+* Fix: IEWAVE login url
+
 ##v8.0.1 (18 February 2015)
 * Fix: UHS
 
