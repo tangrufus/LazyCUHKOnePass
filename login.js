@@ -43,8 +43,7 @@ function(response)
     lib_stored = ((com_id != "") && (lib_pw != ""));
     mycuhk_stored = ((u_id != "") && (cwem_pw != ""));
 	blackboard_stored = ((u_id != "") && (cwem_pw != ""));
-    moodle_stored = ((com_id != "") && (cwem_pw != ""));
-	iewave_stored = (ergwave_id != "") && (ergwave_pw != "");
+	iewave_stored = ((ergwave_id != "") && (ergwave_pw != "") && (fqdn == "IE"));
 	cuhklink_stored = ((u_id != "") && (cwem_pw != ""));
     processHTML();
 });
@@ -216,7 +215,7 @@ function processHTML() {
         redirectAfterLogin();
     } else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("login.chi") > 0 && pageHTML.indexOf("was not valid") < 0){
 		//IEWAVE Login Page
-        if (ergwave_stored == false) {
+        if (iewave_stored == false) {
             showMSG("IEWAVE account not yet stored");
             return;
         }
@@ -227,7 +226,7 @@ function processHTML() {
 		showMSG("Submit is Automatically Clicked");
 	}
 	else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("You are about to be redirected to") > 0){
-		//IEWAVE Login Success   
+		//IEWAVE Login Success
 		redirectAfterLogin();
 	}
 	else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
@@ -242,4 +241,3 @@ function processHTML() {
         showMSG("Submit is Automatically Clicked");
     }
 }
-
