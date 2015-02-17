@@ -1,6 +1,6 @@
 {
 "name": "Lazy CUHK",
- "version": "8.0.0",
+ "version": "8.0.1",
  "manifest_version": 2,
 
 "description": "Automatic login to CUHK services including ResNet, wifi, library, mycuhk, ERGWAVE, IEWAVE,etc. (unofficial)",
@@ -28,7 +28,7 @@
         "*://portal.cuhk.edu.hk/psp/epprd/*",
         "*://elearn.cuhk.edu.hk/*",
         "*://easysearch.lib.cuhk.edu.hk/*",
-        "*://www.uhs.cuhk.edu.hk/Internet-Booking/*Login",
+        "*://www.uhs.cuhk.edu.hk/booking/*login.aspx*",
 		    "*://192.168.110.1:*/www/login.chi?*",
 		    "*://sts.cuhk.edu.hk/adfs/ls/*"
       ]} ]

@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v8.0.1 (18 February 2015)
+* Fix: UHS
+
 ##v8.0.0 (18 February 2015)
 * Add IEWAVE
 * Add Office365

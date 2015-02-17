@@ -166,9 +166,9 @@ function loginERGWAVE() {
 
 function loginUHS() {
 	showMSG("start UHS login");
-	document.getElementsByName('S8_')[0].value = com_id;
-	document.getElementsByName('S10_')[0].value = cwem_pw;
-	document.getElementsByTagName('a')[0].click();
+	document.getElementsByName('txtLoginID')[0].value = com_id;
+	document.getElementsByName('txtPW')[0].value = cwem_pw;
+	document.getElementsByName('btnLogin')[0].click();
 	showMSG("Submit is Automatically Clicked");
 }
 
@@ -271,7 +271,7 @@ function processHTML() {
 			loginERGWAVE();
 		}
 
-	}else if (pageHTML.indexOf("https://www.uhs.cuhk.edu.hk") > 0 || pageHTML.indexOf("大學保健處網上預約服務") > 0) {
+	}else if (pageHTML.indexOf("CADS Ref. No.: 147") > 0) {
 
 		//University Health Service - Internet Booking System
 		if (cuhk_stored == false) {
