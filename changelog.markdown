@@ -1,5 +1,10 @@
 #LazyCUHK ChangeLog
 
+##v8.0.0 (18 February 2015)
+* Add IEWAVE
+* Add Office365
+* Code refactoring
+
 ##v7.0.8 (15 February 2015)
 * Code refactoring
 * Performance boost
