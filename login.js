@@ -42,7 +42,9 @@ function(response)
     wifi_stored = ((com_id != "") && (wifi_pw != ""));
     lib_stored = ((com_id != "") && (lib_pw != ""));
     mycuhk_stored = ((u_id != "") && (cwem_pw != ""));
-    blackboard_stored = ((u_id != "") && (cwem_pw != ""));
+	blackboard_stored = ((u_id != "") && (cwem_pw != ""));
+	iewave_stored = ((ergwave_id != "") && (ergwave_pw != "") && (fqdn == "IE"));
+	cuhklink_stored = ((u_id != "") && (cwem_pw != ""));
     processHTML();
 });
 
@@ -211,6 +213,31 @@ function processHTML() {
     } else if (pageHTML.indexOf("Thank you for using Y5ZONE FREE WiFi Service") > 0 && pageHTML.indexOf("You are now connected to the Internet") > 0) {
         //Y5Zone Login Success
         redirectAfterLogin();
+    } else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("login.chi") > 0 && pageHTML.indexOf("was not valid") < 0){
+		//IEWAVE Login Page
+        if (iewave_stored == false) {
+            showMSG("IEWAVE account not yet stored");
+            return;
+        }
+        showMSG("start IEWAVE login");
+        document.getElementsByName("username")[0].value = ergwave_id;
+        document.getElementsByName("password")[0].value = ergwave_pw;
+ 		document.getElementsByName("form")[0].submit();
+		showMSG("Submit is Automatically Clicked");
+	}
+	else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("You are about to be redirected to") > 0){
+		//IEWAVE Login Success
+		redirectAfterLogin();
+	}
+	else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
+        //CUHKLink Login Page
+        if (cuhklink_stored == false) {
+            showMSG("CUHK Office 365 link account not yet stored");
+            return;
+        }
+        document.getElementsByName("UserName")[0].value = u_id + "@link.cuhk.edu.hk";
+        document.getElementsByName("Password")[0].value = cwem_pw;
+        document.getElementById("loginForm").submit();
+        showMSG("Submit is Automatically Clicked");
     }
 }
-
