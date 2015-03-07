@@ -26,6 +26,7 @@
         "*://encore.lib.cuhk.edu.hk/iii/cas/login*",
         "*://library.cuhk.edu.hk/patroninfo*",
         "*://portal.cuhk.edu.hk/psp/epprd/*",
+		"*://onepass.cuhk.edu.hk/*",
         "*://elearn.cuhk.edu.hk/*",
         "*://easysearch.lib.cuhk.edu.hk/*",
         "*://www.uhs.cuhk.edu.hk/booking/*login.aspx*",
