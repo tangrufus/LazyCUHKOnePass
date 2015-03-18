@@ -196,6 +196,14 @@ function loginOffice365() {
 	showMSG("Submit is Automatically Clicked");
 }
 
+function loginOnePass() {
+	showMSG("start OnePass login");
+	document.getElementsByName("username")[0].value = u_id;
+	document.getElementsByName("password")[0].value = cwem_pw;
+	document.querySelector('input[value="Login"]').click();
+	showMSG("Submit is Automaticallly Clicked");
+}
+
 function processHTML() {
 
 	showMSG("processHTML");
@@ -319,5 +327,14 @@ function processHTML() {
 			loginOffice365();
 		}
 
+	}
+	else if (pageHTML.indexOf("Welcome to OnePass") > 0 && pageHTML.indexOf("Incorrect Login ID or Password.") <= 0) {
+
+		//OnePass Login Page
+		if (mycuhk_stored == false) {
+			showMSG("OnePass account not yet stored");
+		} else {
+			loginOnePass();
+		}
 	}
 }
