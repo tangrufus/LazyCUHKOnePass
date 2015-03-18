@@ -199,6 +199,22 @@ function loginOffice365() {
 	showMSG("Submit is Automatically Clicked");
 }
 
+function loginWorkshopRegSys() {
+	showMSG("start Workshop Registration System login");
+	document.getElementById("txtLoginName").value = u_id;
+	document.getElementById("txtPassword").value = cwem_pw;
+	document.getElementById("btnSubmit").click();
+	showMSG("Submit is Automatically Clicked");
+}
+
+function loginSportsBookingSys() {
+	showMSG("start Sports Facilities Booking System login");
+	document.getElementsByName("id")[0].value = com_id;
+	document.getElementsByName("password")[0].value = cwem_pw;
+	document.getElementsByName("submit")[0].click();
+	showMSG("SUbmit is Automatically Clicked");
+}
+
 function processHTML() {
 
 	showMSG("processHTML");
@@ -306,14 +322,12 @@ function processHTML() {
 			loginIEWAVE();
 		}
 
-	}
-	else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("You are about to be redirected to") > 0) {
+	} else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("You are about to be redirected to") > 0) {
 
 		//IEWAVE Login Success
 		redirectAfterLogin();
 
-	}
-	else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
+	} else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
 
 		//CUHKLink Login Page
 		if (cwem_stored == false) {
@@ -321,6 +335,22 @@ function processHTML() {
 		} else {
 			loginOffice365();
 		}
+	} else if (pageHTML.indexOf("CADS Reference Number: 035") > 0 && pageHTML.indexOf("University ID or Password Incorrect !!") <= 0) {
 
+		//Workshop Registration System
+		if (cwem_stored == false) {
+			showMSG("CWEM account not yet stored");
+		} else {
+			loginWorkshopRegSys();
+		}
+	} else if (pageHTML.indexOf("CADS Reference number: 015") > 0) {
+
+		//Sports Facilities Booking System
+		if (com_stored == false) {
+			showMSG("Computer ID account not yet stored");
+		} else {
+			loginSportsBookingSys();
+		}
 	}
+
 }
