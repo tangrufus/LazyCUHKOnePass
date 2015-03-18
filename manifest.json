@@ -33,7 +33,7 @@
 		    "*://sts.cuhk.edu.hk/adfs/ls/*",
         "*://cloud.itsc.cuhk.edu.hk/*",
         "*://www.peu.cuhk.edu.hk/*",
-        "*://helpdesk.itsc.cuhk.edu.hk/*"
+        "*://helpdesk.itsc.cuhk.edu.hk/*",
         "*://onepass.cuhk.edu.hk/*"
       ]} ],
 "browser_action": {
