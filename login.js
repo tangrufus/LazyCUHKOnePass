@@ -5,6 +5,11 @@ chrome.extension.sendRequest({
 },
 function(response)
 {
+	if (response.enabled == "false") {
+		showMSG("Function disabled")
+		return;
+	}
+
 	showMSG("Init LazyCUHK");
 
 	redirect_url = "https://cdn.rawgit.com/TangRufus/LazyCUHK/46244bdede0d53aaa761ad44dccf85c6a7f969d2/redirect.html";

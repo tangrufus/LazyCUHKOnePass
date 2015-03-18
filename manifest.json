@@ -35,5 +35,9 @@
         "*://www.peu.cuhk.edu.hk/*",
         "*://helpdesk.itsc.cuhk.edu.hk/*"
         "*://onepass.cuhk.edu.hk/*"
-      ]} ]
+      ]} ],
+"browser_action": {
+    "default_icon": "icon/icon48.png",
+    "default_title": "LazyCUHK"
+  }
 }
