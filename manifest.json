@@ -32,6 +32,7 @@
 		    "*://192.168.110.1/www/login.chi*",
 		    "*://sts.cuhk.edu.hk/adfs/ls/*",
         "*://cloud.itsc.cuhk.edu.hk/*",
-        "*://www.peu.cuhk.edu.hk/*"
+        "*://www.peu.cuhk.edu.hk/*",
+        "*://helpdesk.itsc.cuhk.edu.hk/*"
       ]} ]
 }

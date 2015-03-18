@@ -215,6 +215,14 @@ function loginSportsBookingSys() {
 	showMSG("SUbmit is Automatically Clicked");
 }
 
+function loginITSCServiceDesk() {
+	showMSG("start ITSC Service Desk login");
+	document.getElementsByName("username")[0].value = u_id;
+	document.getElementsByName("pwd")[0].value = cwem_pw;
+	document.getElementsByName("login")[0].click();
+	showMSG("SUbmit is Automatically Clicked");
+}
+
 function processHTML() {
 
 	showMSG("processHTML");
@@ -350,6 +358,14 @@ function processHTML() {
 			showMSG("Computer ID account not yet stored");
 		} else {
 			loginSportsBookingSys();
+		}
+	} else if (pageHTML.indexOf("CADS Reference Number: 148") > 0 && pageHTML.indexOf("Authentication failed") <= 0) {
+
+		//ITSC Service Desk
+		if (cwem_stored == false) {
+			showMSG("CWEM account not yet stored");
+		} else {
+			loginITSCServiceDesk();
 		}
 	}
 
