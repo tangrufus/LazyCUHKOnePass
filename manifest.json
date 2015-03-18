@@ -31,5 +31,9 @@
         "*://www.uhs.cuhk.edu.hk/booking/*login.aspx*",
 		    "*://192.168.110.1/www/login.chi*",
 		    "*://sts.cuhk.edu.hk/adfs/ls/*"
-      ]} ]
+      ]} ],
+"browser_action": {
+    "default_icon": "icon/icon48.png",
+    "default_title": "LazyCUHK"
+  }
 }
