@@ -190,7 +190,6 @@ function loginOffice365() {
 	showMSG("Submit is Automatically Clicked");
 }
 
-<<<<<<< HEAD
 function loginWorkshopRegSys() {
 	showMSG("start Workshop Registration System login");
 	document.getElementById("txtLoginName").value = u_id;
@@ -213,14 +212,14 @@ function loginITSCServiceDesk() {
 	document.getElementsByName("pwd")[0].value = cwem_pw;
 	document.getElementsByName("login")[0].click();
 	showMSG("SUbmit is Automatically Clicked");
-=======
+}
+
 function loginOnePass() {
 	showMSG("start OnePass login");
 	document.getElementsByName("username")[0].value = u_id;
 	document.getElementsByName("password")[0].value = cwem_pw;
 	document.getElementsByName("loginForm")[0].submit();
 	showMSG("Submit is Automaticallly Clicked");
->>>>>>> onepass
 }
 
 function processHTML() {
