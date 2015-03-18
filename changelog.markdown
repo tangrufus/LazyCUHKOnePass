@@ -1,7 +1,11 @@
 #LazyCUHK ChangeLog
 
-##v8.0.4 (18 March 2015)
+
+##v9.0.0 (18 March 2015)
+* Add switch icon
 * Add OnePass
+* Add other 3 logins
+* Fix bugs
 
 ##v8.0.3 (18 February 2015)
 * Fix: IEWAVE login url

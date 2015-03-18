@@ -30,6 +30,11 @@
   }
 //end check first run?
 
+//check enable status
+if (localStorage['enabled'] == "false") {
+  chrome.browserAction.setIcon({path:"icon/icon48_gray.png"});
+}
+
 //diable or enable
 chrome.browserAction.onClicked.addListener(function () {
 	if (localStorage['enabled'] == "true") {
