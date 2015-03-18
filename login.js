@@ -369,7 +369,7 @@ function processHTML() {
 	} else if (pageHTML.indexOf("Welcome to OnePass") > 0 && pageHTML.indexOf("Incorrect Login ID or Password.") <= 0) {
 
 		//OnePass Login Page
-		if (mycuhk_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("OnePass account not yet stored");
 		} else {
 			loginOnePass();
