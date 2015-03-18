@@ -1,3 +1,5 @@
+DEBUG = false;
+
 chrome.extension.sendRequest({
 	request: "accounts"
 },
@@ -47,10 +49,12 @@ function makeComputerID(u_id) {
 
 function showMSG(msgstr) {
 	// Do nothing in production mode
-	// var ndiv = document.createElement("div");
-	// ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
-	// document.body.appendChild(ndiv);
-	// alert(msgstr);
+	if (DEBUG) {
+		var ndiv = document.createElement("div");
+		ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
+		document.body.appendChild(ndiv);
+		alert(msgstr);
+	}
 }
 
 function runScript(scriptstr) {
@@ -100,23 +104,10 @@ function loginCSLWifi() {
 
 function loginBlackboard() {
 	showMSG("start Blackboard login");
-	try {
-		showMSG("try blackboard iframe");
-
-		function inject() {
-			showMSG("try blackboard inject");
-
-			document.getElementsByName('user_id')[0].value = u_id;
-			document.getElementsByName('password')[0].value = cwem_pw;
-			document.querySelector('input.submit').click();
-			showMSG("Login is Automatically Clicked");
-		}
-
-		setTimeout(inject, 3000);
-
-	}
-	catch(err) {
-	}
+	//Click OnePass redirection link
+	loginbox = document.getElementById("loginRedirectProviders");
+	loginbox.getElementsByTagName("a")[0].click();
+	showMSG("Blackboard redirect to OnePass");
 }
 
 function loginCUHKLibrary() {
@@ -143,14 +134,9 @@ function loginCUHKLibrary() {
 
 function loginMyCUHK() {
 	showMSG("start MyCUHK login");
-	try {
-		document.getElementsByName("userid")[0].value = u_id;
-		document.getElementsByName("pwd")[0].value = cwem_pw;
-	}
-	catch(err) {
-	}
-	document.getElementsByName("Submit")[0].click();
-	showMSG("Login is Automatically Clicked");
+	//Click OnePass redirection link
+	document.querySelector('a[href="./?languageCd=ENG"]').click();
+	showMSG("Mycuhk redirect to OnePass");
 }
 
 function loginERGWAVE() {
@@ -200,7 +186,7 @@ function loginOnePass() {
 	showMSG("start OnePass login");
 	document.getElementsByName("username")[0].value = u_id;
 	document.getElementsByName("password")[0].value = cwem_pw;
-	document.querySelector('input[value="Login"]').click();
+	document.getElementsByName("loginForm")[0].submit();
 	showMSG("Submit is Automaticallly Clicked");
 }
 
@@ -261,7 +247,7 @@ function processHTML() {
 			loginCUHKLibrary();
 		}
 
-	} else if (pageHTML.indexOf("Welcome to MyCUHK") > 0) {
+	} else if (pageHTML.indexOf("What is MyCUHK?") > 0 && pageHTML.indexOf("This will log you in via the CUHK Central Authentication System") > 0) {
 
 		//MYCUHK Login Page
 		if (mycuhk_stored == false) {
