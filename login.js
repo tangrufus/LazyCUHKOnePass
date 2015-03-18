@@ -22,13 +22,11 @@ function(response)
 	}
 
 	ergwave_stored = ((ergwave_id != "") && (ergwave_pw != "") && (fqdn != ""));
-	cuhk_stored = ((com_id != "") && (cwem_pw != ""));
+	com_stored = ((com_id != "") && (cwem_pw != ""));
 	wifi_stored = ((com_id != "") && (wifi_pw != ""));
 	lib_stored = ((com_id != "") && (lib_pw != ""));
-	mycuhk_stored = ((u_id != "") && (cwem_pw != ""));
-	blackboard_stored = ((u_id != "") && (cwem_pw != ""));
+	cwem_stored = ((u_id != "") && (cwem_pw != ""));
 	iewave_stored = ((ergwave_id != "") && (ergwave_pw != "") && (fqdn == "IE"));
-	cuhklink_stored = ((u_id != "") && (cwem_pw != ""));
 
 	processHTML();
 
@@ -122,21 +120,26 @@ function loginBlackboard() {
 function loginCUHKLibrary() {
 	showMSG("start CUHK Library login");
 	try {
-		if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
+		if (pageHTML.indexOf("bor_id") > 0 && pageHTML.indexOf("bor_verification") > 0) {
 			document.getElementsByName("bor_id")[0].value = u_id;
 			document.getElementsByName("bor_verification")[0].value = lib_pw;
 
-		} else {
+		} else if (pageHTML.indexOf("Logon to your Library record") > 0) {
 			document.getElementsByName("code")[0].value = u_id;
 			document.getElementsByName("pin")[0].value = lib_pw;
+		} else {
+			document.getElementById("username").value = u_id;
+			document.getElementById("passwd").value = lib_pw;
 		}
 	}
 	catch(err) {
 	}
-	if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
-		document.getElementsByClassName("but")[0].click();
-	} else {
+	if (pageHTML.indexOf("bor_id") > 0 && pageHTML.indexOf("bor_verification") > 0) {
+		document.getElementsByName("form1")[0].submit();
+	} else if (pageHTML.indexOf("Logon to your Library record") > 0) {
 		document.getElementsByName("submit")[0].click();
+	} else {
+		document.getElementsByName(".save")[0].click();
 	}
 	showMSG("Login is Automatically Clicked");
 }
@@ -166,7 +169,7 @@ function loginERGWAVE() {
 
 function loginUHS() {
 	showMSG("start UHS login");
-	document.getElementsByName('txtLoginID')[0].value = com_id;
+	document.getElementsByName('txtLoginID')[0].value = u_id;
 	document.getElementsByName('txtPW')[0].value = cwem_pw;
 	document.getElementsByName('btnLogin')[0].click();
 	showMSG("Submit is Automatically Clicked");
@@ -210,7 +213,7 @@ function processHTML() {
 	} else if (pageHTML.indexOf("CUHK Wi-Fi Service Login Page") > 0 || pageHTML.indexOf("Wired Network Service - Login Page") > 0) {
 
 		//CUHK Login Page
-		if (cuhk_stored == false) {
+		if (com_stored == false) {
 			showMSG("CUHK account not yet stored");
 		} else {
 			loginCUHKWifi();
@@ -238,13 +241,13 @@ function processHTML() {
 	} else if (pageHTML.indexOf("Blackboard Learn") > 0) {
 
 		//blackboard Login Page
-		if (blackboard_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("blackboard account not yet stored");
 		} else {
 			loginBlackboard();
 		}
 
-	} else if (pageHTML.indexOf("Staff/Library ID:") > 0 || pageHTML.indexOf("Student / Staff / Library ID:") > 0) {
+	} else if (pageHTML.indexOf("Staff/Library ID") > 0 || pageHTML.indexOf("Student / Staff / Library ID") > 0) {
 
 		//CUHK Library Login Page
 		if (lib_stored == false) {
@@ -256,7 +259,7 @@ function processHTML() {
 	} else if (pageHTML.indexOf("Welcome to MyCUHK") > 0) {
 
 		//MYCUHK Login Page
-		if (mycuhk_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("MyCUHK account not yet stored");
 		} else {
 			loginMyCUHK();
@@ -271,10 +274,10 @@ function processHTML() {
 			loginERGWAVE();
 		}
 
-	}else if (pageHTML.indexOf("CADS Ref. No.: 147") > 0) {
+	}else if (pageHTML.indexOf("CADS Ref. No.: 147") > 0 && pageHTML.indexOf("Invalid Login.") <= 0 ) {
 
 		//University Health Service - Internet Booking System
-		if (cuhk_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("UHS account not yet stored");
 		} else {
 			loginUHS();
@@ -313,7 +316,7 @@ function processHTML() {
 	else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
 
 		//CUHKLink Login Page
-		if (cuhklink_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("CUHK Office 365 link account not yet stored");
 		} else {
 			loginOffice365();
