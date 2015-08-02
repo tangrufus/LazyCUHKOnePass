@@ -1,5 +1,8 @@
 #LazyCUHK ChangeLog
 
+##v8.0.4 (03 August 2015)
+* Redirect to Rediret to ChopChop Baby Portacool video
+
 ##v8.0.3 (18 February 2015)
 * Fix: IEWAVE login url
 
