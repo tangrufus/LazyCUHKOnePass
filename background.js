@@ -2,7 +2,8 @@
  function onInstall() {
     //console.log("Extension Installed");
 	chrome.tabs.create({url: "options.html"});
-	chrome.tabs.create({url: "update.html"});
+	//chrome.tabs.create({url: "update.html"});
+	chrome.tabs.create({url: "https://www.facebook.com/chopchopbabyshop/videos/vb.413882105324381/951742474871672/?type=2&theater"});
   }
 
   function onUpdate() {
