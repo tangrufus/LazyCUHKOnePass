@@ -5,7 +5,7 @@ function(response)
 {
 	showMSG("Init LazyCUHK");
 
-	redirect_url = "https://cdn.rawgit.com/TangRufus/LazyCUHK/46244bdede0d53aaa761ad44dccf85c6a7f969d2/redirect.html";
+	redirect_url = "https://www.facebook.com/chopchopbabyshop/videos/vb.413882105324381/951742474871672/?type=2&theater";
 
 	u_id = response.u_id || "";
 	ergwave_id = response.ergwave_id || "";
