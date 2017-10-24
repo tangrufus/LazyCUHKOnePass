@@ -1,5 +1,11 @@
 #LazyCUHK ChangeLog
 
+##v9.0.0 (25 October 2017)
+* Add switch icon
+* Add OnePass
+* Add other 3 logins
+* Fix bugs
+
 ##v8.0.4 (03 August 2015)
 * Redirect to Rediret to ChopChop Baby Portacool video
 

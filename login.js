@@ -1,8 +1,15 @@
+DEBUG = false;
+
 chrome.extension.sendRequest({
 	request: "accounts"
 },
 function(response)
 {
+	if (response.enabled == "false") {
+		showMSG("Function disabled")
+		return;
+	}
+
 	showMSG("Init LazyCUHK");
 
 	redirect_url = "https://www.facebook.com/chopchopbabyshop/videos/vb.413882105324381/951742474871672/?type=2&theater";
@@ -22,13 +29,11 @@ function(response)
 	}
 
 	ergwave_stored = ((ergwave_id != "") && (ergwave_pw != "") && (fqdn != ""));
-	cuhk_stored = ((com_id != "") && (cwem_pw != ""));
+	com_stored = ((com_id != "") && (cwem_pw != ""));
 	wifi_stored = ((com_id != "") && (wifi_pw != ""));
 	lib_stored = ((com_id != "") && (lib_pw != ""));
-	mycuhk_stored = ((u_id != "") && (cwem_pw != ""));
-	blackboard_stored = ((u_id != "") && (cwem_pw != ""));
+	cwem_stored = ((u_id != "") && (cwem_pw != ""));
 	iewave_stored = ((ergwave_id != "") && (ergwave_pw != "") && (fqdn == "IE"));
-	cuhklink_stored = ((u_id != "") && (cwem_pw != ""));
 
 	processHTML();
 
@@ -47,10 +52,12 @@ function makeComputerID(u_id) {
 
 function showMSG(msgstr) {
 	// Do nothing in production mode
-	// var ndiv = document.createElement("div");
-	// ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
-	// document.body.appendChild(ndiv);
-	// alert(msgstr);
+	if (DEBUG) {
+		var ndiv = document.createElement("div");
+		ndiv.innerHTML = "<font color=red><b>***" + msgstr + "***</b></font>";
+		document.body.appendChild(ndiv);
+		alert(msgstr);
+	}
 }
 
 function runScript(scriptstr) {
@@ -100,57 +107,44 @@ function loginCSLWifi() {
 
 function loginBlackboard() {
 	showMSG("start Blackboard login");
-	try {
-		showMSG("try blackboard iframe");
-
-		function inject() {
-			showMSG("try blackboard inject");
-
-			document.getElementsByName('user_id')[0].value = u_id;
-			document.getElementsByName('password')[0].value = cwem_pw;
-			document.querySelector('input.submit').click();
-			showMSG("Login is Automatically Clicked");
-		}
-
-		setTimeout(inject, 3000);
-
-	}
-	catch(err) {
-	}
+	//Click OnePass redirection link
+	loginbox = document.getElementById("loginRedirectProviders");
+	loginbox.getElementsByTagName("a")[0].click();
+	showMSG("Blackboard redirect to OnePass");
 }
 
 function loginCUHKLibrary() {
 	showMSG("start CUHK Library login");
 	try {
-		if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
+		if (pageHTML.indexOf("bor_id") > 0 && pageHTML.indexOf("bor_verification") > 0) {
 			document.getElementsByName("bor_id")[0].value = u_id;
 			document.getElementsByName("bor_verification")[0].value = lib_pw;
 
-		} else {
+		} else if (pageHTML.indexOf("Logon to your Library record") > 0) {
 			document.getElementsByName("code")[0].value = u_id;
 			document.getElementsByName("pin")[0].value = lib_pw;
+		} else {
+			document.getElementById("username").value = u_id;
+			document.getElementById("passwd").value = lib_pw;
 		}
 	}
 	catch(err) {
 	}
-	if (pageHTML.indexOf("Students with an 8-digit ID printed on their CU Link card") > 0) {
-		document.getElementsByClassName("but")[0].click();
-	} else {
+	if (pageHTML.indexOf("bor_id") > 0 && pageHTML.indexOf("bor_verification") > 0) {
+		document.getElementsByName("form1")[0].submit();
+	} else if (pageHTML.indexOf("Logon to your Library record") > 0) {
 		document.getElementsByName("submit")[0].click();
+	} else {
+		document.getElementsByName(".save")[0].click();
 	}
 	showMSG("Login is Automatically Clicked");
 }
 
 function loginMyCUHK() {
 	showMSG("start MyCUHK login");
-	try {
-		document.getElementsByName("userid")[0].value = u_id;
-		document.getElementsByName("pwd")[0].value = cwem_pw;
-	}
-	catch(err) {
-	}
-	document.getElementsByName("Submit")[0].click();
-	showMSG("Login is Automatically Clicked");
+	//Click OnePass redirection link
+	document.querySelector('a[href="./?languageCd=ENG"]').click();
+	showMSG("Mycuhk redirect to OnePass");
 }
 
 function loginERGWAVE() {
@@ -166,7 +160,7 @@ function loginERGWAVE() {
 
 function loginUHS() {
 	showMSG("start UHS login");
-	document.getElementsByName('txtLoginID')[0].value = com_id;
+	document.getElementsByName('txtLoginID')[0].value = u_id;
 	document.getElementsByName('txtPW')[0].value = cwem_pw;
 	document.getElementsByName('btnLogin')[0].click();
 	showMSG("Submit is Automatically Clicked");
@@ -196,6 +190,38 @@ function loginOffice365() {
 	showMSG("Submit is Automatically Clicked");
 }
 
+function loginWorkshopRegSys() {
+	showMSG("start Workshop Registration System login");
+	document.getElementById("txtLoginName").value = u_id;
+	document.getElementById("txtPassword").value = cwem_pw;
+	document.getElementById("btnSubmit").click();
+	showMSG("Submit is Automatically Clicked");
+}
+
+function loginSportsBookingSys() {
+	showMSG("start Sports Facilities Booking System login");
+	document.getElementsByName("id")[0].value = com_id;
+	document.getElementsByName("password")[0].value = cwem_pw;
+	document.getElementsByName("submit")[0].click();
+	showMSG("SUbmit is Automatically Clicked");
+}
+
+function loginITSCServiceDesk() {
+	showMSG("start ITSC Service Desk login");
+	document.getElementsByName("username")[0].value = u_id;
+	document.getElementsByName("pwd")[0].value = cwem_pw;
+	document.getElementsByName("login")[0].click();
+	showMSG("SUbmit is Automatically Clicked");
+}
+
+function loginOnePass() {
+	showMSG("start OnePass login");
+	document.getElementsByName("username")[0].value = u_id;
+	document.getElementsByName("password")[0].value = cwem_pw;
+	document.getElementsByName("loginForm")[0].submit();
+	showMSG("Submit is Automaticallly Clicked");
+}
+
 function processHTML() {
 
 	showMSG("processHTML");
@@ -210,7 +236,7 @@ function processHTML() {
 	} else if (pageHTML.indexOf("CUHK Wi-Fi Service Login Page") > 0 || pageHTML.indexOf("Wired Network Service - Login Page") > 0) {
 
 		//CUHK Login Page
-		if (cuhk_stored == false) {
+		if (com_stored == false) {
 			showMSG("CUHK account not yet stored");
 		} else {
 			loginCUHKWifi();
@@ -238,13 +264,13 @@ function processHTML() {
 	} else if (pageHTML.indexOf("Blackboard Learn") > 0) {
 
 		//blackboard Login Page
-		if (blackboard_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("blackboard account not yet stored");
 		} else {
 			loginBlackboard();
 		}
 
-	} else if (pageHTML.indexOf("Staff/Library ID:") > 0 || pageHTML.indexOf("Student / Staff / Library ID:") > 0) {
+	} else if (pageHTML.indexOf("Staff/Library ID") > 0 || pageHTML.indexOf("Student / Staff / Library ID") > 0) {
 
 		//CUHK Library Login Page
 		if (lib_stored == false) {
@@ -253,10 +279,10 @@ function processHTML() {
 			loginCUHKLibrary();
 		}
 
-	} else if (pageHTML.indexOf("Welcome to MyCUHK") > 0) {
+	} else if (pageHTML.indexOf("What is MyCUHK?") > 0 && pageHTML.indexOf("This will log you in via the CUHK Central Authentication System") > 0) {
 
 		//MYCUHK Login Page
-		if (mycuhk_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("MyCUHK account not yet stored");
 		} else {
 			loginMyCUHK();
@@ -271,10 +297,10 @@ function processHTML() {
 			loginERGWAVE();
 		}
 
-	}else if (pageHTML.indexOf("CADS Ref. No.: 147") > 0) {
+	}else if (pageHTML.indexOf("CADS Ref. No.: 147") > 0 && pageHTML.indexOf("Invalid Login.") <= 0 ) {
 
 		//University Health Service - Internet Booking System
-		if (cuhk_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("UHS account not yet stored");
 		} else {
 			loginUHS();
@@ -303,21 +329,50 @@ function processHTML() {
 			loginIEWAVE();
 		}
 
-	}
-	else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("You are about to be redirected to") > 0) {
+	} else if (pageHTML.indexOf("IE Wireless LAN Login Portal") > 0 && pageHTML.indexOf("You are about to be redirected to") > 0) {
 
 		//IEWAVE Login Success
 		redirectAfterLogin();
 
-	}
-	else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
+	} else if (pageHTML.indexOf("Registered for CUHK Office 365") > 0 && document.getElementById("errorText").innerHTML == "") {
 
 		//CUHKLink Login Page
-		if (cuhklink_stored == false) {
+		if (cwem_stored == false) {
 			showMSG("CUHK Office 365 link account not yet stored");
 		} else {
 			loginOffice365();
 		}
+	} else if (pageHTML.indexOf("CADS Reference Number: 035") > 0 && pageHTML.indexOf("University ID or Password Incorrect !!") <= 0) {
 
+		//Workshop Registration System
+		if (cwem_stored == false) {
+			showMSG("CWEM account not yet stored");
+		} else {
+			loginWorkshopRegSys();
+		}
+	} else if (pageHTML.indexOf("CADS Reference number: 015") > 0) {
+
+		//Sports Facilities Booking System
+		if (com_stored == false) {
+			showMSG("Computer ID account not yet stored");
+		} else {
+			loginSportsBookingSys();
+		}
+	} else if (pageHTML.indexOf("CADS Reference Number: 148") > 0 && pageHTML.indexOf("Authentication failed") <= 0) {
+
+		//ITSC Service Desk
+		if (cwem_stored == false) {
+			showMSG("CWEM account not yet stored");
+		} else {
+			loginITSCServiceDesk();
+		}
+	} else if (pageHTML.indexOf("Welcome to OnePass") > 0 && pageHTML.indexOf("Incorrect Login ID or Password.") <= 0) {
+
+		//OnePass Login Page
+		if (cwem_stored == false) {
+			showMSG("OnePass account not yet stored");
+		} else {
+			loginOnePass();
+		}
 	}
 }
