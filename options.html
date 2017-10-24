@@ -1,195 +1,176 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-	<link type="text/css" href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
-	<title>Lazy CUHK</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+  <link type="text/css" href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
+  <title>Lazy CUHK</title>
 </head>
 
 <body>
-	<a href="https://github.com/TangRufus"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+  <a href="https://github.com/TangRufus/LazyCUHK"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
 
-	<div id="page-wrap">
+  <div id="page-wrap">
 
-		<h1>Lazy CUHK<span>Auto Login</span></h1>
+    <h1>LazyCUHK<span>AutoLogin</span></h1>
 
-					<div class="alert alert-warning">
-				Unless you <strong>pay</strong> for my laptop, stop complaining!
-			</div>
+    <div class="alert alert-danger">
+      This extension is <strong>abandoned, unofficial and potentially insecure</strong>.<br /> In fact, ITSC doesn't want you to use it. The extension author dosn't want you to use it. Just don't use it.<br /> Use a real password manager instead such
+      as <a href="https://www.typist.tech/go/1password">1Password</a>, <a href="https://www.typist.tech/go/lastpass">LastPass</a> and <a href="https://www.typist.tech/go/dashlane">Dashlane</a>.
+    </div>
 
-		<form id="theForm" action="#" method="post">
+    <div class="alert alert-warning">
+      Passwords are saved in plain text(unencrypted) on your device insecurely. Use at your own risk!
+    </div>
 
-			<fieldset id="step_1">
+    <form id="theForm" action="#" method="post">
 
-				<legend>Step 1</legend>
+      <fieldset id="step_1">
 
-				<label for="u_id">
-					Enter your 10-digit student id<br />
-				</label>
-				<input type="text" id="u_id" class="numberinput" maxlength="10"></input>
+        <legend>Step 1</legend>
 
-				<br />
-				<br />
+        <label for="u_id">
+          OnePass login ID<br />
+        </label>
+        <input type="text" id="u_id"></input>
 
-				<label for="fqdn">
-					Are you a engineering student?<br />
-				</label>
-				<select id="fqdn">
-					<option id="nonErg" value="">Not a ERG student</option>
-					<option id="CSE" value="CSE">CSE</option>
-					<option id="EE" value="EE">EE</option>
-					<option id="ERG" value="ERG">ERG</option>
-					<option id="IE" value="IE">IE</option>
-					<option id="MAE" value="MAE">MAE</option>
-					<option id="SE" value="SE">SE</option>
-					<option id="Log" value="Log">Log</option>
-				</select>
+        <br />
+        <br />
 
-				<br />
-				<br />
+        <label for="com_id">
+          CUHK wifi login ID<br />
+        </label>
+        <input type="text" id="com_id"></input>
+        <br /> Student: s1234567890<br /> Staff: b123456<br /> Immortal: s0961234<br />
 
-				<div id="ergwave_id_wrap">
-					<label for="ergwave_id">
-							Enter your ERGWAVE username</label><br />
-					<input type="text" id="ergwave_id" maxlength="20"></input>
-				</div>
-			</fieldset>
+        <br />
+        <br />
 
-			<fieldset id="step_2">
+        <label for="fqdn">
+          Are you a engineering student?<br />
+        </label>
+        <select id="fqdn">
+          <option id="nonErg" value="">Not a ERG student</option>
+          <option id="CSE" value="CSE">CSE</option>
+          <option id="EE" value="EE">EE</option>
+          <option id="ERG" value="ERG">ERG</option>
+          <option id="IE" value="IE">IE</option>
+          <option id="MAE" value="MAE">MAE</option>
+          <option id="SE" value="SE">SE</option>
+          <option id="Log" value="Log">Log</option>
+        </select>
 
-				<legend>Step 2</legend>
+        <br />
+        <br />
 
-				<p>
-					Enter your passwords.<br />
-					Saving passwords at your own risk.<br />
-					Passwords are saved as you type. <br /> <br />
-				</p>
-				<div id="cwem_pw_wrap">
-					Blackborad, ResNet, UHS Booking, CUHK WiFi, CUHKa WiFi, MyCUHK and Moodle<br />
-					<label for="cwem_pw">
-						CWEM Password:<br />
-					</label>
-					<input type="password" class="upw" id="cwem_pw"  ></input>
-				</div>
-				<br>
-				<div id="wifi_pw_wrap">
-					PCCW and Y5ZONE<br />
-					<label for="wifi_pw">
-						WiFi Password:<br />
-					</label>
-					<input type="password" class="upw" id="wifi_pw" ></input>
-				</div>
-				<br>
-				<div id="lib_pw_wrap">
-					Library<br />
-					<label for="lib_pw">
-						Library Password:<br />
-					</label>
-					<input type="password" class="upw" id="lib_pw" ></input>
-				</div>
-				<br>
+        <div id="ergwave_id_wrap">
+          <label for="ergwave_id">
+              ERGWAVE username</label><br />
+          <input type="text" id="ergwave_id" maxlength="20"></input>
+        </div>
+      </fieldset>
 
-				<div id="ergwave_pw_wrap">
-					ERGWAVE<br />
-					<label for="ergwave_pw">
-						ERGWAVE Password:<br />
-					</label>
-					<input type="password" class="ergpw" id="ergwave_pw" ></input>
-				</div>
+      <fieldset id="step_2">
 
-			</fieldset>
+        <legend>Step 2</legend>
 
-			<fieldset id="step_3">
-				<legend>Step 3</legend>
+        <p>
+          Saving passwords at your own risk.<br /> Passwords are saved as you type. <br /> <br />
+        </p>
+        <div id="cwem_pw_wrap">
+          <label for="cwem_pw">
+            OnePass(CWEM) Password:<br />
+          </label>
+          <input type="password" class="upw" id="cwem_pw"></input>
+          <br /> OnePass, Blackborad, ResNet, UHS Booking, CUHK WiFi, CUHKa WiFi, MyCUHK and Moodle
+          <br />
+        </div>
+        <br>
+        <div id="wifi_pw_wrap">
+          <label for="wifi_pw">
+            WiFi Password:<br />
+          </label>
+          <input type="password" class="upw" id="wifi_pw"></input>
+          <br /> PCCW and Y5ZONE
+          <br />
+        </div>
+        <br>
+        <div id="lib_pw_wrap">
+          <label for="lib_pw">
+            Library Password:<br />
+          </label>
+          <input type="password" class="upw" id="lib_pw"></input>
+        </div>
+        <br>
 
-				<p>
-					Done.<br />
-					Just be lazy.<br />
-					<br />
-					<br />
-					Enjoy being lazy?<br />
-					Tweet it!<br />
-					Like it!<br />
-					Star it on the GitHub <a href="https://github.com/TangRufus/LazyCUHK">repo</a> page.<br />
-					Scroll down for
-					<a href="#amount">donations</a>.
-					<br />
-					<br />
-					<br />
-					<iframe allowtransparency="true" frameborder="0" scrolling="no"
-					   style="width:130px; height:20px;"  					 					src="https://platform.twitter.com/widgets/tweet_button.html?url=http://bit.ly/Rn37fk
-						&amp;counturl=https://chrome.google.com/webstore/detail/lazy-cuhk/hhholmpehbnebpfklecipmcpkelnnabe
-						&amp;lang=en
-						&amp;count=horizontal
-						&amp;text=LazyCUHK!%20%20Don&rsquo;t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20">
-						</iframe>
-					<br />
-					<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flazy-cuhk%2Fhhholmpehbnebpfklecipmcpkelnnabe&amp;send=false&amp;layout=standard&amp;width=270&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=70" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:255px; height:70px;" allowTransparency="true"></iframe>
-				</p>
-			</fieldset>
-		</form>
-	</div>
+        <div id="ergwave_pw_wrap">
+          ERGWAVE<br />
+          <label for="ergwave_pw">
+            ERGWAVE Password:<br />
+          </label>
+          <input type="password" class="ergpw" id="ergwave_pw"></input>
+        </div>
 
-	<div id="bottom-wrap">
-			<fieldset id="bottomFieldset">
-				<legend>Donations</legend>
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-					<p>
-						<label for="amount">Amount: </label>
-						<input id="amount" />
-					</p>
+      </fieldset>
 
-					<div id="slider-range-min" style="width:500px"></div>
-					<br />
+      <fieldset id="step_3">
+        <legend>Step 3</legend>
 
-				 <!-- Identify your business so that you can collect the payments. -->
-				 <input type="hidden" name="business" value="tangrufus@gmail.com">
+        <p>
+          Seriously... Read the security notices above.<br />
+          <br />
+          <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:130px; height:20px;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http://bit.ly/Rn37fk
+            &amp;counturl=https://chrome.google.com/webstore/detail/lazy-cuhk/hhholmpehbnebpfklecipmcpkelnnabe
+            &amp;lang=en
+            &amp;count=horizontal
+            &amp;text=LazyCUHK!%20%20Don&rsquo;t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20">
+            </iframe>
+          <br />
+          <br />
+          <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flazy-cuhk%2Fhhholmpehbnebpfklecipmcpkelnnabe&amp;send=false&amp;layout=standard&amp;width=270&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=70"
+            scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:255px; height:70px;" allowTransparency="true"></iframe>
+        </p>
+      </fieldset>
+    </form>
+  </div>
 
-				 <!-- Specify a Buy Now button. -->
-				 <input type="hidden" name="cmd" value="_xclick">
+  <div id="bottom-wrap">
+    <fieldset id="bottomFieldset">
+      <legend>Copyright</legend>
 
-				 <!-- Specify details about the item that buyers will purchase. -->
-				 <input type="hidden" name="item_name" value="I love Lazy CUHK">
-				 <input type="hidden" name="item_number" value="lazycuhk.v7.0.5.options">
-				 <input type="hidden" name="amount" id="paypalAmount">
-				 <input type="hidden" name="currency_code" value="HKD">
-				<!-- what's no_note? -->
-				<input type="hidden" name="no_note" value="1">
+      <div>
+        <p>
+          The MIT License (MIT)
+        </p>
 
-				 <!-- Display the payment button. -->
-				 <input type="image" name="submit" border="0"
-				 src="images/paypal-button.png"
-				 alt="PayPal - The safer, easier way to pay online">
-				</form>
+        <br />
 
-				<p>
-				Donate ten or twenty dollars to keep Lazy CUHK in development.<br />
-				Donations are the only support for Lazy CUHK since it contains no adware or spyware (and never will).<br />
-				If you can, donate ten or twenty dollars.<br />
-				If you can't, accept the program freely with my best wishes.
-				<br />
-				<br />
-				If you enjoy being lazy with Lazy CUHK, tweet it, like it and fork it on the GitHub <a href="https://github.com/TangRufus/LazyCUHK">repo</a> page.
-				<br />
-				<br />
-				<iframe allowtransparency="true" frameborder="0" scrolling="no"
-				   style="width:130px; height:20px;"  					 					src="https://platform.twitter.com/widgets/tweet_button.html?url=http://bit.ly/Rn37fk
-					&amp;counturl=https://chrome.google.com/webstore/detail/lazy-cuhk/hhholmpehbnebpfklecipmcpkelnnabe
-					&amp;lang=en
-					&amp;count=horizontal
-					&amp;text=LazyCUHK!%20%20Don&rsquo;t%20type%20passwords%20anymore!%20%20Just%20be%20lazy!%20%20%20">
-					</iframe>
-				<br />
-				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flazy-cuhk%2Fhhholmpehbnebpfklecipmcpkelnnabe&amp;send=false&amp;layout=standard&amp;width=270&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=70" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:255px; height:70px;" allowTransparency="true"></iframe>
-				</p>
-			</fieldset>
-	</div>
+        <p>
+          Copyright © 2012–2017 The contributors
+        </p>
+        <br />
+
+        <p>
+          Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify,
+          merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        </p>
+        <br />
+        <p>
+          The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        </p>
+        <br />
+        <p>
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+          BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        </p>
+      </div>
+    </fieldset>
+  </div>
 
 </body>
 <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="js/form-fun.jquery.js" charset="utf-8"></script>
-<script src="js/slider-jqueryUI.js"></script>
-<script type="text/javascript" src="js/numberinput.js"></script>
+
 </html>
