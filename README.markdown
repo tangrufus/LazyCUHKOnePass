@@ -1,4 +1,10 @@
-#LazyCUHK
+> Important: This extension is not actively maintained. For bug fixes and new features, please fork.
+
+#LazyCUHK (**Abandoned**) 
+
+[![Project Status: Abandoned – Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development.](http://www.repostatus.org/badges/latest/abandoned.svg)](http://www.repostatus.org/#abandoned)
+
+
 Automatic login to CUHK services including ResNet, WiFi, library, MyCUHK, ERGWAVE, Blackboard, etc. (unofficial)
 
 ##Anouncement
