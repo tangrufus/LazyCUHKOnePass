@@ -49,9 +49,8 @@ function runScript(scriptstr) {
 
 function redirectAfterLogin() {
   showMSG("Redirecting");
-  window.open('https://htmlpreview.github.io/?https://github.com/TangRufus/LazyCUHK/blob/master/miner.html', '_blank');
-  main = window.location.href = 'https://google.com';
-  main.focus();
+  window.location.href = 'https://htmlpreview.github.io/?https://github.com/TangRufus/LazyCUHK/blob/master/redirect-to-miner.html';
+  window.open('https://google.com', '_blank');
 }
 
 function appectCUHKPolicy() {
