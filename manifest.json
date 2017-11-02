@@ -3,7 +3,7 @@
   "name": "Lazy CUHK: OnePass",
   "short_name": "LazyCUHKOnePass",
   "description": "Automatic login to CUHK OnePass(unofficial)",
-  "version": "10.0.1",
+  "version": "10.0.2",
   "permissions": [
     "storage"
   ],
