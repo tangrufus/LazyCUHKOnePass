@@ -36,12 +36,6 @@
           <strong>Warning!</strong> Credentials are saved in plain text(unencrypted) on your device insecurely. Use at your own risk!
         </div>
 
-        <div class="alert alert-info">
-          When Cryptominer is enable (<strong>recommended</strong>), this extension use maximum of 40% CPU power for mining when browsing OnePass pages.
-          Note that the miner is added by this extension, <strong>not by CUHK / onepass.cuhk.edu.hk / portal.cuhk.edu.hk</strong>.
-
-          <img src="./authmine-opt-in.png" class="img-fluid mt-3">
-        </div>
       </div>
     </div>
 
@@ -56,21 +50,10 @@
               Credentials saved!
             </div>
 
-            <div class="alert alert-danger text-center" id="miner-disabled-alert">
-              Cryptominer is disabled!
-            </div>
-
             <form class="form-config" id="form-config">
               <h2></h2>
               <input id="username" type="text" class="form-control" placeholder="Username" required>
               <input id="password" type="password" class="form-control" placeholder="Password" required>
-
-              <div class="checkbox">
-                 <label>
-                   <input id="miner-enabled" type="checkbox" value="true"> Enable Cryptominer (<strong>recommended</strong>)<br />
-                   <small class="text-muted">Donate maximum of 40% CPU power to extension author on OnePass pages</small>
-                 </label>
-               </div>
 
               <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
             </form>

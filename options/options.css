@@ -8,10 +8,6 @@ body {
   margin-bottom: 2rem;
 }
 
-#form-saved-alert, #miner-disabled-alert {
-  display: none;
-}
-
 .form-config .checkbox {
   font-weight: 400;
 }
