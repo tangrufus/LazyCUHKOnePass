@@ -15,8 +15,7 @@
     ],
     "js": [
       "content-scripts/click-redirect-button.js",
-      "content-scripts/submit-login-form.js",
-      "content-scripts/start-miner.js"
+      "content-scripts/submit-login-form.js"
     ]
   }]
 }
