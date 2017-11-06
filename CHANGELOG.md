@@ -1,10 +1,22 @@
 # Change Log
 
-## [10.0.2](https://github.com/TangRufus/LazyCUHKOnePass/tree/10.0.2) (2017-11-03)
+## [11.0.0](https://github.com/TangRufus/LazyCUHKOnePass/tree/11.0.0) (2017-11-06)
+[Full Changelog](https://github.com/TangRufus/LazyCUHKOnePass/compare/10.0.2...11.0.0)
+
+**Merged pull requests:**
+
+- Git: Ignore `node\_modules` [\#20](https://github.com/TangRufus/LazyCUHKOnePass/pull/20) ([TangRufus](https://github.com/TangRufus))
+- Open options page on install/update [\#19](https://github.com/TangRufus/LazyCUHKOnePass/pull/19) ([TangRufus](https://github.com/TangRufus))
+- Update options page [\#18](https://github.com/TangRufus/LazyCUHKOnePass/pull/18) ([TangRufus](https://github.com/TangRufus))
+- Use eslint [\#17](https://github.com/TangRufus/LazyCUHKOnePass/pull/17) ([TangRufus](https://github.com/TangRufus))
+- Remove coinhive miner [\#16](https://github.com/TangRufus/LazyCUHKOnePass/pull/16) ([TangRufus](https://github.com/TangRufus))
+
+## [10.0.2](https://github.com/TangRufus/LazyCUHKOnePass/tree/10.0.2) (2017-11-02)
 [Full Changelog](https://github.com/TangRufus/LazyCUHKOnePass/compare/10.0.1...10.0.2)
 
 **Merged pull requests:**
 
+- Version bump 10.0.2 [\#15](https://github.com/TangRufus/LazyCUHKOnePass/pull/15) ([TangRufus](https://github.com/TangRufus))
 - Rename: Lazy CUHK - OnePass --\> Lazy CUHK: OnePass [\#13](https://github.com/TangRufus/LazyCUHKOnePass/pull/13) ([TangRufus](https://github.com/TangRufus))
 
 ## [10.0.1](https://github.com/TangRufus/LazyCUHKOnePass/tree/10.0.1) (2017-11-02)
