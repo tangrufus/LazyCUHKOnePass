@@ -8,8 +8,8 @@ body {
   margin-bottom: 2rem;
 }
 
-.form-config .checkbox {
-  font-weight: 400;
+#form-saved-alert {
+  display: none;
 }
 
 .form-config .form-control {
